@@ -85,9 +85,9 @@ function ChartSwarm({
 
     // Create simulation
     const simulation = forceSimulation(initialNodes)
-      .force('forceX', forceX(centerX).strength(0.2))
+      .force('forceX', forceX(centerX).strength(0.04))
       .force('forceY', forceY(d => yScale(parseFloat(d.data[type][category]) || 0)).strength(1.5))
-      .force('collide', forceCollide(d => d.r * 1.5))
+      .force('collide', forceCollide(d => d.r * 1.25))
       .stop();
 
     // Run simulation steps
