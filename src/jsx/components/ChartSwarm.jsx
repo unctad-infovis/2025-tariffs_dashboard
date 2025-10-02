@@ -31,7 +31,7 @@ function ChartSwarm({
       }
     };
     updateSize();
-    // window.addEventListener('resize', updateSize);
+    window.addEventListener('resize', updateSize);
     return () => window.removeEventListener('resize', updateSize);
   }, []);
 
@@ -68,7 +68,7 @@ function ChartSwarm({
       // Define stroke for selected
       const strokeColor = isSelected ? '#eb1f48' : 'none';
       const strokeWidth = isSelected ? 1 : 0;
-      const radius = isSelected ? 7 : 5.5;
+      const radius = isSelected ? 8 : (containerSize.width > 500) ? 5.5 : 4.5;
 
       return {
         ...d,
@@ -103,19 +103,6 @@ function ChartSwarm({
         <Axis scale={yScale} width={containerSize.width} />
         {nodes.map(circle => (
           <g key={circle.id}>
-            {/* Halo circle */}
-            <circle
-              className="circle-halo"
-              cx={circle.x}
-              cy={circle.y}
-              fill="none"
-              opacity={0} // initially invisible
-              r={circle.r + 4} // halo radius = marker radius + lineWidthPlus
-              stroke={circle.fillColor} // same as bubble color
-              strokeWidth={2} // same as lineWidthPlus
-              style={{ transition: 'opacity 0.3s' }}
-            />
-            {/* Main circle */}
             <circle
               cx={circle.x}
               cy={circle.y}

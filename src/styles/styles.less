@@ -8,6 +8,9 @@
   margin: auto auto;
   max-width: 1200px;
   padding: 20px 0 0 0;
+  button {
+    outline: none;
+  }
   .title_container {
     align-items: flex-start;
     display: flex;
@@ -79,7 +82,9 @@
         }
       }
       .basic-single {
-        min-width: 300px;
+        min-width: 290px;
+        width: 100%;
+        z-index: 2000;
         .select__control {
           box-shadow: none;
           svg {
@@ -97,11 +102,12 @@
     display: flex;
     font-size: 15px;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 10px 0;
     .legend_item {
       align-items: center;
       display: flex;
-      margin: 0 5px;
+      margin: 0 5px 5px 5px;
       &:before {
         border-radius: 100%;
         content: '';
@@ -163,7 +169,7 @@
       right: 0;
       top: 0;
       transition: transform 0.3s ease;
-      width: 100%;
+      width: calc(100% - 20px);
       z-index: 10;
       button {
         background-color: #009edb;

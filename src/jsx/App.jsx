@@ -46,7 +46,7 @@ function App() {
     if (appRef.current.offsetWidth < 600) {
       setTimeout(() => {
         setSwarmCollapsed(true);
-      }, 1000);
+      }, 1500);
     }
   }, []);
 
