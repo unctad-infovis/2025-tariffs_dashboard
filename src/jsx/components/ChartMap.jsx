@@ -22,7 +22,7 @@ import getColor from '../helpers/map/GetColor.js';
 // import { v4 as uuidv4 } from 'uuid';
 
 function ChartMap({
-  category, country, setCountry, swarm_collapsed, type, values
+  category, country = null, setCountry, swarm_collapsed, type, values
 }) {
   const chartMapRef = useRef(null);
 
@@ -118,11 +118,7 @@ function ChartMap({
         lineColor: bubble_color,
         states: {
           hover: {
-            halo: { size: 0 },
-            lineWidth: 0,
-            lineWidthPlus: 4,
-            marker: {},
-            opacity: 1
+            enabled: false
           }
         }
       },
@@ -178,20 +174,11 @@ function ChartMap({
     };
     chartMapRef.current = Highcharts.mapChart('map_container', {
       caption: {
-        align: 'left',
-        margin: 15,
-        style: {
-          color: 'rgba(0, 0.0, 0.0, 0.8)',
-          fontSize: '13px'
-        },
-        text: '<em>Source:</em> UN Trade and Development (UNCTAD) based on USITC and US presidential actions, including the Executive Orders published by the White House.<br /><em>Note:</em> Trade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Tariffs during the 90-day pause reflect the situation as of 18 June 2025. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Data updated as of 12 September 2025. <a href="https://unctad.org/page/map-disclaimer" target="_blank">Map disclaimer</a>',
-        useHTML: true,
-        verticalAlign: 'bottom',
-        x: 0
+        enabled: false,
       },
       chart: {
         backgroundColor: 'transparent',
-        height: Math.max((document.getElementById('map_container').offsetWidth * 9) / 16, 550),
+        height: Math.max((document.getElementById('map_container').offsetWidth * 7) / 16, 500),
         type: 'map'
       },
       credits: {
@@ -334,6 +321,7 @@ function ChartMap({
             duration: 600,
             easing: 'easeOutQuad'
           },
+          cursor: 'pointer',
           data: bubbleData,
           joinBy: null,
           maxSize: '9%',
@@ -341,7 +329,13 @@ function ChartMap({
           name: 'Average Tariff Rate',
           marker: {
             lineWidth: 0,
-            fillOpacity: 0.7
+            fillOpacity: 0.7,
+            states: {
+              hover: {
+                fillOpacity: 0.7,
+                enabled: false
+              }
+            }
           },
           type: 'mapbubble',
           visible: true,
@@ -359,7 +353,9 @@ function ChartMap({
         pointFormat: '{point.name}: <strong>{point.value:.1f}%</strong>',
         style: {
           color: '#000',
-          fontSize: '13px'
+          fontFamily: 'Inter, "Helvetica Neue", Helvetica, Arial, sans-serif',
+          fontSize: '13px',
+          fontWeight: 300
         }
       },
       title: {
@@ -415,10 +411,13 @@ export default ChartMap;
 
 ChartMap.propTypes = {
   category: PropTypes.string.isRequired,
-  country: PropTypes.shape({
-    value: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired
-  }).isRequired,
+  country: PropTypes.oneOfType([
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
+    }),
+    PropTypes.oneOf([null])
+  ]),
   setCountry: PropTypes.func.isRequired,
   swarm_collapsed: PropTypes.bool.isRequired,
   type: PropTypes.string.isRequired,

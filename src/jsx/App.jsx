@@ -1,5 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {
+  useState, useEffect, useRef, useCallback
+} from 'react';
 import '../styles/styles.less';
+
+// https://www.npmjs.com/package/react-is-visible
+import 'intersection-observer';
+import { useIsVisible } from 'react-is-visible';
 
 import Select from 'react-select';
 
@@ -8,15 +14,16 @@ import ChartMap from './components/ChartMap.jsx';
 import ChartSwarm from './components/ChartSwarm.jsx';
 
 function App() {
+  const appRef = useRef(null);
+  const isVisibleApp = useIsVisible(appRef);
+
   const [data, setData] = useState(false);
 
   const [type, setType] = useState('pre');
   const [category, setCategory] = useState('total');
-  const [country, setCountry] = useState({ label: 'Choose a country', value: '' });
+  const [country, setCountry] = useState(null);
 
   const [swarmCollapsed, setSwarmCollapsed] = useState(false);
-
-  const appRef = useRef(null);
 
   const fetchExternalData = () => {
     const dataPath = `${(window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2025-tariffs_dashboard/' : (window.location.href.includes('localhost:80')) ? './' : 'https://unctad-infovis.github.io/2025-tariffs_dashboard/'}assets/data/`;
@@ -34,6 +41,20 @@ function App() {
     }
     return values;
   };
+
+  const checkWidth = useCallback(() => {
+    if (appRef.current.offsetWidth < 600) {
+      setTimeout(() => {
+        setSwarmCollapsed(true);
+      }, 1000);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isVisibleApp === true) {
+      checkWidth();
+    }
+  }, [checkWidth, isVisibleApp]);
 
   useEffect(() => {
     fetchExternalData().then((result) => setData(result));
@@ -138,7 +159,6 @@ function App() {
         <div className="legend_item selected">Selected country</div>
       </div>
       <div className="visualization_container">
-
         <div className="map_wrapper">
           {data !== false && (
           <ChartMap
@@ -157,9 +177,27 @@ function App() {
             <button type="button" onClick={() => setSwarmCollapsed(!swarmCollapsed)}>
               {swarmCollapsed ? '◀◀' : '▶▶'}
             </button>
-            <ChartSwarm values={data} />
+            <ChartSwarm
+              category={category}
+              country={country}
+              swarm_collapsed={swarmCollapsed}
+              setCountry={setCountry}
+              type={type}
+              values={data}
+            />
           </div>
         )}
+      </div>
+      <div className="caption_container">
+        <em>Source:</em>
+        {' '}
+        UN Trade and Development (UNCTAD) based on USITC and US presidential actions, including the Executive Orders published by the White House.
+        <br />
+        <em>Note:</em>
+        {' '}
+        Trade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Tariffs during the 90-day pause reflect the situation as of 18 June 2025. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Data updated as of 12 September 2025.
+        {' '}
+        <a href="https://unctad.org/page/map-disclaimer" target="_blank" rel="noreferrer">Map disclaimer</a>
       </div>
     </div>
   );

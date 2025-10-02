@@ -1,25 +1,161 @@
 import React, {
-  useRef
+  useRef, useState, useEffect, useMemo
 } from 'react';
 import PropTypes from 'prop-types';
+import {
+  scaleLinear, forceSimulation, forceX, forceY, forceCollide
+} from 'd3';
+import Highcharts from 'highcharts';
+import { v4 as uuidv4 } from 'uuid';
 
-// import { v4 as uuidv4 } from 'uuid';
+import Axis from '../helpers/swarm/Axis.jsx';
+import Tooltip from '../helpers/swarm/Tooltip.jsx';
 
-function ChartSwarm({ values }) {
+function ChartSwarm({
+  category, country = null, setCountry, type, values
+}) {
   const chartSwarmRef = useRef(null);
-  console.log(values);
+
+  const tooltipRef = useRef(null);
+  const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
+  const [nodes, setNodes] = useState([]);
+
+  // Measure container size
+  useEffect(() => {
+    const updateSize = () => {
+      if (chartSwarmRef.current) {
+        setContainerSize({
+          height: chartSwarmRef.current.offsetHeight,
+          width: chartSwarmRef.current.offsetWidth
+        });
+      }
+    };
+    updateSize();
+    // window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
+  const yScale = useMemo(
+    () => scaleLinear()
+      .domain([-10, 54])
+      .range([containerSize.height - 20, 20])
+      .clamp(true),
+    [containerSize.height]
+  );
+
+  // Compute nodes
+  useEffect(() => {
+    if (!values?.[1] || containerSize.width === 0 || !yScale) return;
+
+    const centerX = containerSize.width / 2; // offset for axis
+    const swarmData = values[1];
+
+    const initialNodes = swarmData.filter(d => d.data[type][category] !== null).map(d => {
+      let bubbleColor = '#999';
+      if (d.dev_status === 'Developed') bubbleColor = '#004987';
+      else if (d.dev_status === 'Developing') bubbleColor = '#009edb';
+      else if (d.dev_status === 'Least developed') bubbleColor = '#fbaf17';
+
+      const isSelected = country?.value === d.Country;
+      const hasSelection = !!country?.value;
+      const fillColor = isSelected
+        ? bubbleColor
+        : hasSelection
+          ? Highcharts.color(bubbleColor).setOpacity(0.3).get('rgba')
+          : bubbleColor;
+      const fillOpacity = isSelected ? 1 : hasSelection ? 0.3 : 1;
+
+      // Define stroke for selected
+      const strokeColor = isSelected ? '#eb1f48' : 'none';
+      const strokeWidth = isSelected ? 1 : 0;
+      const radius = isSelected ? 7 : 5.5;
+
+      return {
+        ...d,
+        fillColor,
+        fillOpacity,
+        id: d?.ISO3 || uuidv4(),
+        r: radius,
+        strokeColor,
+        strokeWidth,
+        x: centerX,
+        y: yScale(parseFloat(d.data[type][category]) || 0)
+      };
+    });
+
+    // Create simulation
+    const simulation = forceSimulation(initialNodes)
+      .force('forceX', forceX(centerX).strength(0.2))
+      .force('forceY', forceY(d => yScale(parseFloat(d.data[type][category]) || 0)).strength(1.5))
+      .force('collide', forceCollide(d => d.r * 1.5))
+      .stop();
+
+    // Run simulation steps
+    for (let i = 0; i < 300; i++) simulation.tick();
+
+    setNodes(initialNodes);
+  }, [values, containerSize, category, type, country, yScale]);
+
   return (
-    <div className="swarm_container">
-      <div id="swarm_container" className="" ref={chartSwarmRef}>Swarm</div>
+    <div ref={chartSwarmRef} style={{ width: '100%', height: '100%' }}>
+      <Tooltip ref={tooltipRef} />
+      <svg width={containerSize.width} height={containerSize.height}>
+        <Axis scale={yScale} width={containerSize.width} />
+        {nodes.map(circle => (
+          <g key={circle.id}>
+            {/* Halo circle */}
+            <circle
+              className="circle-halo"
+              cx={circle.x}
+              cy={circle.y}
+              fill="none"
+              opacity={0} // initially invisible
+              r={circle.r + 4} // halo radius = marker radius + lineWidthPlus
+              stroke={circle.fillColor} // same as bubble color
+              strokeWidth={2} // same as lineWidthPlus
+              style={{ transition: 'opacity 0.3s' }}
+            />
+            {/* Main circle */}
+            <circle
+              cx={circle.x}
+              cy={circle.y}
+              r={circle.r}
+              fill={circle.fillColor}
+              fillOpacity={circle.fillOpacity}
+              onClick={() => {
+                if (!setCountry) return;
+                const labelen = circle.Country;
+                setCountry(prev => (prev?.value === labelen ? null : { value: labelen, label: labelen }));
+              }}
+              onMouseEnter={(e) => {
+                tooltipRef.current?.show(e, circle, type, category);
+              }}
+              onMouseLeave={() => {
+                tooltipRef.current?.hide();
+              }}
+              stroke={circle.strokeColor}
+              strokeWidth={circle.strokeWidth}
+              style={{
+                cursor: 'pointer',
+                transition: 'cx 0.6s, cy 0.6s, fill 0.6s, fill-opacity 0.6s, stroke 0.6s, stroke-width 0.6s',
+              }}
+            />
+          </g>
+        ))}
+      </svg>
     </div>
   );
 }
 
-export default ChartSwarm;
-
 ChartSwarm.propTypes = {
-  values: PropTypes.arrayOf(PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array
-  ])).isRequired
+  category: PropTypes.string.isRequired,
+  country: PropTypes.oneOfType([
+    PropTypes.shape({ value: PropTypes.string.isRequired, label: PropTypes.string.isRequired }),
+    PropTypes.oneOf([null]),
+  ]),
+  setCountry: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired,
+  values: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.array])).isRequired,
 };
+
+export default ChartSwarm;

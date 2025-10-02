@@ -47,10 +47,11 @@
   .selection_container {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     margin: 0px 0 30px 0;
     .selector_container {
       display: inline-block;
-      margin: 0 10px;
+      margin: 0 5px 10px 5px;
       button {
         background-color: #C5DFEF;
         border-radius: 10px;
@@ -97,13 +98,15 @@
     .legend_item {
       align-items: center;
       display: flex;
-      margin: 0 10px;
+      margin: 0 5px;
       &:before {
         border-radius: 100%;
         content: '';
         display: inline-block;
         height: 15px;
         margin-right: 3px;
+        min-height: 15px;
+        min-width: 15px;
         width: 15px;
       }
       &.developed {
@@ -127,6 +130,8 @@
           border-style: solid;
           border-width: 2px;
           height: 13px;
+          min-height: 13px;
+          min-width: 13px;
           width: 13px;
         }
       }
@@ -135,6 +140,7 @@
   .visualization_container {
     height: 100%;
     overflow: hidden;
+    margin-bottom: 15px;
     position: relative;
     .map_wrapper {
       height: 100%;
@@ -170,13 +176,56 @@
       &.collapsed {
         transform: translateX(calc(100% - 40px)); /* slide offscreen to the right */
       }
+      .swarm_tooltip {
+        background-color: #ffffff;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 73, 135, 0.2);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        color: #000;
+        font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        opacity: 0;
+        padding: 8px 10px;
+        pointer-events: none;
+        position: absolute;
+        transition: opacity 0.2s;
+        z-index: 1000;
+        strong {
+          font-weight: 600;
+        }
+        &:after {
+          border-color: #ffffff transparent transparent transparent;
+          border-style: solid;
+          border-width: 6px;
+          content: '';
+          filter: drop-shadow(0 2px 2px rgba(0, 73, 135, 0.2));
+          left: 50%;
+          position: absolute;
+          top: 100%;
+          transform: translateX(-50%);
+        }
+      }
+
       .swarm_container {
         align-items: center;
-        width: 100%;
-        height: 100%;
         display: flex;
+        height: 100%;
         justify-content: center;
+        width: 100%;
+        svg {
+          display: block;
+        }
       }
+    }
+  }
+  .caption_container {
+    color: rgba(0, 0.0, 0.0, 0.8);
+    font-size: 12px;
+    margin-bottom: 15px;
+    padding: 5px;
+    a {
+      color: #000;
     }
   }
 }
