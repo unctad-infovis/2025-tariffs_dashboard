@@ -73,7 +73,7 @@ function App() {
   };
 
   const changeCountry = (option) => {
-    setCountry(option && (!Array.isArray(option) || option.length) ? option : { label: 'Choose a country', value: '' });
+    setCountry(option && (!Array.isArray(option) || option.length) ? option : null);
   };
 
   return (
