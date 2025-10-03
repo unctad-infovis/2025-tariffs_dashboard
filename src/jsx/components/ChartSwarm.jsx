@@ -61,9 +61,9 @@ function ChartSwarm({
       const fillColor = isSelected
         ? bubbleColor
         : hasSelection
-          ? Highcharts.color(bubbleColor).setOpacity(0.55).get('rgba')
+          ? Highcharts.color(bubbleColor).setOpacity(0.45).get('rgba')
           : bubbleColor;
-      const fillOpacity = isSelected ? 1 : hasSelection ? 0.55 : 1;
+      const fillOpacity = isSelected ? 1 : hasSelection ? 0.45 : 1;
 
       // Define stroke for selected
       const strokeColor = isSelected ? '#eb1f48' : 'none';

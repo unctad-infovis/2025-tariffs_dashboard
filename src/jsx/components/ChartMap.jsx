@@ -62,7 +62,7 @@ function ChartMap({
             marker.lineColor = '#eb1f48';
             marker.lineWidth = 1;
           } else {
-            color = Highcharts.color(original).setOpacity(0.5).get('rgba');
+            color = Highcharts.color(original).setOpacity(0.4).get('rgba');
             marker.lineWidth = 0;
           }
         }

@@ -9,7 +9,7 @@ function Axis({ scale = null, width = 0 }) {
   useEffect(() => {
     if (axisRef.current && scale) {
       const axis = axisRight(scale)
-        .tickValues([5, 15, 25, 35, 45]) // only show 10,20,30,40
+        .tickValues([10, 20, 30, 40, 50]) // only show 10,20,30,40
         .tickFormat(d => `${d}%`) // append %
         .tickSize(0); // no default short ticks
 
