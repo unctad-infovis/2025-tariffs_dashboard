@@ -81,75 +81,95 @@ function App() {
       <div className="title_container">
         <img src="https://static.dwcdn.net/custom/themes/unctad-2024-rebrand/Blue%20arrow.svg" className="logo" alt="UN Trade and Development logo" />
         <div className="title">
-          <h3>Tariffs dashboard</h3>
-          <h4>Evolution of the tariff landscape in the United States</h4>
+          <h3>How much have US tariffs really changed?</h3>
+          <h4>Public discussions tend to focus on “reciprocal” tariffs, but they are only part of the story. Applied tariffs differ also because of older tariff rules, exemptions, and sectoral tariffs. By weighting tariffs according to the products each country actually exports to the US, UNCTAD calculates the effective tariff rate they face.</h4>
         </div>
       </div>
-      <div className="label_container"><h4>Select time frame</h4></div>
-      <div className="selection_container type_selection">
-        <div className="selector_container">
-          <button type="button" className="active" value="pre" onClick={(event) => changeType(event.currentTarget)}>
-            <div className="title">Pre</div>
-            <div className="subtitle">January 2025</div>
-          </button>
+      <div className="controls_container">
+        <div className="control_container">
+          <div className="label_container">
+            <h4>
+              <span>1</span>
+              Select time frame
+            </h4>
+          </div>
+          <div className="selection_container type_selection">
+            <div className="selector_container">
+              <button type="button" className="active" value="pre" onClick={(event) => changeType(event.currentTarget)}>
+                <div className="title">Pre January 2025</div>
+              </button>
+            </div>
+            <div className="selector_container">
+              <button type="button" value="during" onClick={(event) => changeType(event.currentTarget)}>
+                <div className="title">During</div>
+              </button>
+            </div>
+            <div className="selector_container">
+              <button type="button" value="now" onClick={(event) => changeType(event.currentTarget)}>
+                <div className="title">Currnt tariffs</div>
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="selector_container">
-          <button type="button" value="during" onClick={(event) => changeType(event.currentTarget)}>
-            <div className="title">During</div>
-            <div className="subtitle">90-day pause</div>
-          </button>
+        <div className="control_container">
+          <div className="label_container">
+            <h4>
+              <span>2</span>
+              Select commodity group
+            </h4>
+          </div>
+          <div className="selection_container category_selection">
+            <div className="selector_container">
+              <button type="button" className="active" value="total" onClick={(event) => changeCategory(event.currentTarget)}>
+                <div className="title">Total</div>
+              </button>
+            </div>
+            <div className="selector_container">
+              <button type="button" value="manufacturing" onClick={(event) => changeCategory(event.currentTarget)}>
+                <div className="title">Manufacturing</div>
+              </button>
+            </div>
+            <div className="selector_container">
+              <button type="button" value="agriculture" onClick={(event) => changeCategory(event.currentTarget)}>
+                <div className="title">Agriculture</div>
+              </button>
+            </div>
+            <div className="selector_container">
+              <button type="button" value="fuels_mining" onClick={(event) => changeCategory(event.currentTarget)}>
+                <div className="title">Fuels &amp; mining</div>
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="selector_container">
-          <button type="button" value="now" onClick={(event) => changeType(event.currentTarget)}>
-            <div className="title">After</div>
-            <div className="subtitle">90-day pause</div>
-          </button>
-        </div>
-      </div>
-      <div className="label_container"><h4>Select commodity group</h4></div>
-      <div className="selection_container category_selection">
-        <div className="selector_container">
-          <button type="button" className="active" value="total" onClick={(event) => changeCategory(event.currentTarget)}>
-            <div className="title">Total</div>
-          </button>
-        </div>
-        <div className="selector_container">
-          <button type="button" value="manufacturing" onClick={(event) => changeCategory(event.currentTarget)}>
-            <div className="title">Manufacturing</div>
-          </button>
-        </div>
-        <div className="selector_container">
-          <button type="button" value="agriculture" onClick={(event) => changeCategory(event.currentTarget)}>
-            <div className="title">Agriculture</div>
-          </button>
-        </div>
-        <div className="selector_container">
-          <button type="button" value="fuels_mining" onClick={(event) => changeCategory(event.currentTarget)}>
-            <div className="title">Fuels and mining</div>
-          </button>
-        </div>
-      </div>
-      <div className="label_container"><h4>Choose a country</h4></div>
-      <div className="selection_container">
-        <div className="selector_container">
-          {data
-          && (
-          <Select
-            className="basic-single"
-            classNamePrefix="select"
-            defaultValue=""
-            isClearable
-            isDisabled={false}
-            isLoading={false}
-            isRtl={false}
-            isSearchable
-            name="country"
-            value={country}
-            onChange={(selectedOption) => changeCountry(selectedOption)}
-            options={data[1].slice().sort((a, b) => a.Country.localeCompare(b.Country)).map((el) => ({ value: el.Country, label: el.Country }))}
-            placeholder="Select a country"
-          />
-          )}
+        <div className="control_container">
+          <div className="label_container">
+            <h4>
+              <span>3</span>
+              Choose a country
+            </h4>
+          </div>
+          <div className="selection_container">
+            <div className="selector_container">
+              {data
+              && (
+              <Select
+                className="basic-single"
+                classNamePrefix="select"
+                defaultValue=""
+                isClearable
+                isDisabled={false}
+                isLoading={false}
+                isRtl={false}
+                isSearchable
+                name="country"
+                value={country}
+                onChange={(selectedOption) => changeCountry(selectedOption)}
+                options={data[1].slice().sort((a, b) => a.Country.localeCompare(b.Country)).map((el) => ({ value: el.Country, label: el.Country }))}
+                placeholder="Select a country"
+              />
+              )}
+            </div>
+          </div>
         </div>
       </div>
       <div className="legend_container">
@@ -224,7 +244,7 @@ function App() {
         <br />
         <em>Note:</em>
         {' '}
-        Trade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Tariffs during the 90-day pause reflect the situation as of 18 June 2025. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Data updated as of 12 September 2025.
+        Trade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Tariffs in June 2025 reflect the situation during 90-day pause. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Data updated as of 12 September 2025.
         {' '}
         <a href="https://unctad.org/page/map-disclaimer" target="_blank" rel="noreferrer">Map disclaimer</a>
       </div>
