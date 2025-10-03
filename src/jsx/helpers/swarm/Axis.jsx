@@ -36,7 +36,7 @@ function Axis({ scale = null, width = 0 }) {
     }
   }, [scale, width]);
 
-  return <g ref={axisRef} transform={`translate(${width - 20},0)`} />;
+  return <g ref={axisRef} transform={`translate(${width - 20}, 0)`} />;
 }
 
 Axis.propTypes = {
