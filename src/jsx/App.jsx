@@ -174,21 +174,34 @@ function App() {
         {data !== false && (
           <div className={`swarm_wrapper ${swarmState}`}>
             <div className="swarm_controls_container">
+              {swarmState !== 'full' && (
               <button
                 type="button"
                 onClick={() => {
-                  setSwarmState(prev => (prev === 'collapsed' ? 'expanded' : 'collapsed'));
+                  setSwarmState(prev => {
+                    if (prev === 'collapsed') return 'expanded';
+                    if (prev === 'expanded') return 'collapsed';
+                    if (prev === 'full') return 'expanded';
+                    return prev;
+                  });
                 }}
               >
                 {swarmState === 'collapsed' ? '◀◀' : '▶▶'}
               </button>
+              )}
               {' '}
               {appRef.current.offsetWidth > 900 && (
                 <button
                   type="button"
-                  onClick={() => setSwarmState('full')}
+                  onClick={() => {
+                    setSwarmState(prev => {
+                      if (prev === 'full') return 'expanded';
+                      if (prev === 'expanded') return 'full';
+                      return prev;
+                    });
+                  }}
                 >
-                  ⛶
+                  {swarmState === 'full' ? '▶▶' : '⛶'}
                 </button>
               )}
             </div>
