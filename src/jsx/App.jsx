@@ -106,7 +106,7 @@ function App() {
             </div>
             <div className="selector_container">
               <button type="button" value="now" onClick={(event) => changeType(event.currentTarget)}>
-                <div className="title">Currnt tariffs</div>
+                <div className="title">Current tariffs</div>
               </button>
             </div>
           </div>
