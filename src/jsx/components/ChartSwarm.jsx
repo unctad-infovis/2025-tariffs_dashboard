@@ -12,7 +12,7 @@ import Axis from '../helpers/swarm/Axis.jsx';
 import Tooltip from '../helpers/swarm/Tooltip.jsx';
 
 function ChartSwarm({
-  category, country = null, setCountry, type, values
+  category, country = null, setCountry, swarm_collapsed, type, values
 }) {
   const chartSwarmRef = useRef(null);
 
@@ -33,7 +33,7 @@ function ChartSwarm({
     updateSize();
     window.addEventListener('resize', updateSize);
     return () => window.removeEventListener('resize', updateSize);
-  }, []);
+  }, [swarm_collapsed]);
 
   const yScale = useMemo(
     () => scaleLinear()
@@ -78,6 +78,7 @@ function ChartSwarm({
         r: radius,
         strokeColor,
         strokeWidth,
+        // x: centerX + (Math.random() - 0.5) * 200,
         x: centerX,
         y: yScale(parseFloat(d.data[type][category]) || 0)
       };
@@ -85,16 +86,16 @@ function ChartSwarm({
 
     // Create simulation
     const simulation = forceSimulation(initialNodes)
-      .force('forceX', forceX(centerX).strength(0.04))
-      .force('forceY', forceY(d => yScale(parseFloat(d.data[type][category]) || 0)).strength(1.5))
-      .force('collide', forceCollide(d => d.r * 1.25))
+      .force('forceX', forceX(centerX).strength((swarm_collapsed === 'full') ? 0.01 : 0.02))
+      .force('forceY', forceY(d => yScale(parseFloat(d.data[type][category]) || 0)).strength((swarm_collapsed === 'full') ? 9 : 1.5))
+      .force('collide', forceCollide(d => (d.r * ((swarm_collapsed === 'full') ? 1.4 : 1.25))))
       .stop();
 
     // Run simulation steps
-    for (let i = 0; i < 300; i++) simulation.tick();
+    for (let i = 0; i < 200; i++) simulation.tick();
 
     setNodes(initialNodes);
-  }, [values, containerSize, category, type, country, yScale]);
+  }, [values, containerSize, category, type, country, swarm_collapsed, yScale]);
 
   return (
     <div ref={chartSwarmRef} style={{ width: '100%', height: '100%' }}>
@@ -141,6 +142,7 @@ ChartSwarm.propTypes = {
     PropTypes.oneOf([null]),
   ]),
   setCountry: PropTypes.func.isRequired,
+  swarm_collapsed: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   values: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object, PropTypes.array])).isRequired,
 };

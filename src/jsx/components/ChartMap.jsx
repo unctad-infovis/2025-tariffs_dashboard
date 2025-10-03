@@ -30,12 +30,12 @@ function ChartMap({
     const container = document.querySelector('.map_wrapper');
     if (!container) return;
 
-    container.style.transform = swarm_collapsed ? 'translateX(0)' : 'translateX(-200px)';
+    container.style.transform = (swarm_collapsed === 'collapsed') ? 'translateX(0)' : 'translateX(-200px)';
 
     if (chartMapRef.current?.mapNavigation) {
       chartMapRef.current.mapNavigation.update({
         buttonOptions: {
-          x: swarm_collapsed ? 0 : 200
+          x: swarm_collapsed === 'collapsed' ? 0 : 200
         }
       });
     }
@@ -419,7 +419,7 @@ ChartMap.propTypes = {
     PropTypes.oneOf([null])
   ]),
   setCountry: PropTypes.func.isRequired,
-  swarm_collapsed: PropTypes.bool.isRequired,
+  swarm_collapsed: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   values: PropTypes.arrayOf(PropTypes.oneOfType([
     PropTypes.object,

@@ -23,7 +23,7 @@ function App() {
   const [category, setCategory] = useState('total');
   const [country, setCountry] = useState(null);
 
-  const [swarmCollapsed, setSwarmCollapsed] = useState(false);
+  const [swarmState, setSwarmState] = useState('expanded');
 
   const fetchExternalData = () => {
     const dataPath = `${(window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2025-tariffs_dashboard/' : (window.location.href.includes('localhost:80')) ? './' : 'https://unctad-infovis.github.io/2025-tariffs_dashboard/'}assets/data/`;
@@ -45,7 +45,7 @@ function App() {
   const checkWidth = useCallback(() => {
     if (appRef.current.offsetWidth < 600) {
       setTimeout(() => {
-        setSwarmCollapsed(true);
+        setSwarmState('collapsed');
       }, 1500);
     }
   }, []);
@@ -164,23 +164,39 @@ function App() {
           <ChartMap
             category={category}
             country={country}
-            swarm_collapsed={swarmCollapsed}
+            swarm_collapsed={swarmState}
             setCountry={setCountry}
             type={type}
             values={data}
           />
           )}
         </div>
-
         {data !== false && (
-          <div className={`swarm_wrapper ${swarmCollapsed ? 'collapsed' : ''}`}>
-            <button type="button" onClick={() => setSwarmCollapsed(!swarmCollapsed)}>
-              {swarmCollapsed ? '◀◀' : '▶▶'}
-            </button>
+          <div className={`swarm_wrapper ${swarmState}`}>
+            <div className="swarm_controls_container">
+              <button
+                type="button"
+                onClick={() => {
+                  setSwarmState(prev => (prev === 'collapsed' ? 'expanded' : 'collapsed'));
+                }}
+              >
+                {swarmState === 'collapsed' ? '◀◀' : '▶▶'}
+              </button>
+              {' '}
+              {appRef.current.offsetWidth > 900 && (
+                <button
+                  type="button"
+                  onClick={() => setSwarmState('full')}
+                >
+                  ⛶
+                </button>
+              )}
+            </div>
+
             <ChartSwarm
               category={category}
               country={country}
-              swarm_collapsed={swarmCollapsed}
+              swarm_collapsed={swarmState}
               setCountry={setCountry}
               type={type}
               values={data}

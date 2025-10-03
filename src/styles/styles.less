@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto auto;
-  max-width: 1200px;
+  max-width: 1350px;
   padding: 20px 0 0 0;
   button {
     outline: none;
@@ -171,19 +171,25 @@
       transition: transform 0.3s ease;
       width: calc(100% - 20px);
       z-index: 10;
-      button {
-        background-color: #009edb;
-        border: 0;
-        color: #fff;
-        cursor: pointer;
-        height: 25px;
-        line-height: 25px;
-        padding: 0px;
-        position: absolute;
-        width: 40px;
-      }
       &.collapsed {
         transform: translateX(calc(100% - 40px)); /* slide offscreen to the right */
+      }
+      &.full {
+        max-width: calc(100% - 40px);
+        width: 100%;
+      }
+      .swarm_controls_container {
+        position: absolute;
+        button {
+          background-color: #009edb;
+          border: 0;
+          color: #fff;
+          cursor: pointer;
+          height: 25px;
+          line-height: 25px;
+          padding: 0px;
+          width: 40px;
+        }
       }
       .swarm_tooltip {
         background-color: #ffffff;
