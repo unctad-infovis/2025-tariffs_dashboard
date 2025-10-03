@@ -55,15 +55,15 @@ function ChartMap({
         const isSelected = hasSelection && point.name === country?.value;
         // Determine color and marker
         let color = original;
-        const marker = { fillOpacity: 0.7, lineColor: original, lineWidth: 0 };
+        const marker = { };
         if (hasSelection) {
           if (isSelected) {
+            color = Highcharts.color(original).setOpacity(1).get('rgba');
             marker.lineColor = '#eb1f48';
             marker.lineWidth = 1;
           } else {
-            color = Highcharts.color(original).setOpacity(0.2).get('rgba');
+            color = Highcharts.color(original).setOpacity(0.5).get('rgba');
             marker.lineWidth = 0;
-            marker.fillOpacity = 0.2;
           }
         }
         point.update({
@@ -99,7 +99,7 @@ function ChartMap({
     return {
       all_data: match,
       code,
-      color: bubble_color,
+      color: Highcharts.color(bubble_color).setOpacity(0.7).get('rgba'),
       cursor: 'pointer',
       events: {
         click: () => {
@@ -329,10 +329,10 @@ function ChartMap({
           name: 'Average Tariff Rate',
           marker: {
             lineWidth: 0,
-            fillOpacity: 0.7,
+            fillOpacity: 1,
             states: {
               hover: {
-                fillOpacity: 0.7,
+                fillOpacity: 1,
                 enabled: false
               }
             }
@@ -355,7 +355,7 @@ function ChartMap({
           color: '#000',
           fontFamily: 'Inter, "Helvetica Neue", Helvetica, Arial, sans-serif',
           fontSize: '13px',
-          fontWeight: 300
+          fontWeight: 300,
         }
       },
       title: {
