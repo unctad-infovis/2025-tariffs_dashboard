@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 import {
-  scaleLinear, forceSimulation, forceX, forceY, forceCollide
+  scaleLinear, forceSimulation, forceX, /* forceY, */ forceCollide
 } from 'd3';
 import Highcharts from 'highcharts';
 import { v4 as uuidv4 } from 'uuid';
@@ -87,8 +87,13 @@ function ChartSwarm({
     // Create simulation
     const simulation = forceSimulation(initialNodes)
       .force('forceX', forceX(centerX).strength((swarm_collapsed === 'full') ? 0.01 : 0.02))
-      .force('forceY', forceY(d => yScale(parseFloat(d.data[type][category]) || 0)).strength((swarm_collapsed === 'full') ? 9 : 1.5))
+      // .force('forceY', forceY(d => yScale(parseFloat(d.data[type][category]) || 0)).strength((swarm_collapsed === 'full') ? 9 : 1.5))
       .force('collide', forceCollide(d => (d.r * ((swarm_collapsed === 'full') ? 1.4 : 1.25))))
+      .force('lockY', () => {
+        initialNodes.forEach(node => {
+          node.y = yScale(parseFloat(node.data[type][category]) || 0);
+        });
+      })
       .stop();
 
     // Run simulation steps
