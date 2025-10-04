@@ -27,7 +27,7 @@ function ChartMap({
   const chartMapRef = useRef(null);
 
   useEffect(() => {
-    const container = document.querySelector('.map_wrapper');
+    const container = document.querySelector('.map_container');
     if (!container) return;
 
     container.style.transform = (swarm_collapsed === 'collapsed') ? 'translateX(0)' : 'translateX(-200px)';
@@ -402,7 +402,7 @@ function ChartMap({
 
   return (
     <div className="map_container">
-      <div id="map_container" className="" ref={chartMapRef} />
+      <div id="map_container" ref={chartMapRef} />
     </div>
   );
 }

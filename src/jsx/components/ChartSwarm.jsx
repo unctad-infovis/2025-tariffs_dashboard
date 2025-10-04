@@ -106,7 +106,6 @@ function ChartSwarm({
     <div ref={chartSwarmRef} style={{ width: '100%', height: '100%' }}>
       <Tooltip ref={tooltipRef} />
       <svg width={containerSize.width} height={containerSize.height}>
-        <Axis scale={yScale} width={containerSize.width} />
         {nodes.map(circle => (
           <g key={circle.id}>
             <circle
@@ -135,6 +134,7 @@ function ChartSwarm({
             />
           </g>
         ))}
+        <Axis scale={yScale} width={containerSize.width} />
       </svg>
     </div>
   );

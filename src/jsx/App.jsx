@@ -101,7 +101,7 @@ function App() {
             </div>
             <div className="selector_container">
               <button type="button" value="during" onClick={(event) => changeType(event.currentTarget)}>
-                <div className="title">During</div>
+                <div className="title">June 2025</div>
               </button>
             </div>
             <div className="selector_container">
@@ -115,13 +115,13 @@ function App() {
           <div className="label_container">
             <h4>
               <span>2</span>
-              Select commodity group
+              Select type of product
             </h4>
           </div>
           <div className="selection_container category_selection">
             <div className="selector_container">
               <button type="button" className="active" value="total" onClick={(event) => changeCategory(event.currentTarget)}>
-                <div className="title">Total</div>
+                <div className="title">All</div>
               </button>
             </div>
             <div className="selector_container">
@@ -145,7 +145,7 @@ function App() {
           <div className="label_container">
             <h4>
               <span>3</span>
-              Choose a country
+              Select a country
             </h4>
           </div>
           <div className="selection_container">
@@ -180,6 +180,11 @@ function App() {
       </div>
       <div className="visualization_container">
         <div className="map_wrapper">
+          <p>
+            <strong>Mapping the size</strong>
+            <br />
+            Trade-weighted average
+          </p>
           {data !== false && (
           <ChartMap
             category={category}
@@ -226,6 +231,11 @@ function App() {
               )}
             </div>
 
+            <p>
+              <strong>Mapping the size</strong>
+              <br />
+              Trade-weighted average
+            </p>
             <ChartSwarm
               category={category}
               country={country}
