@@ -76,6 +76,44 @@ function App() {
     setCountry(option && (!Array.isArray(option) || option.length) ? option : null);
   };
 
+  const customStyles = {
+  // outer control (border, background)
+    control: (provided, state) => ({
+      ...provided,
+      minHeight: 28, // control height
+      height: 28,
+      boxShadow: state.isFocused ? provided.boxShadow : null,
+    }),
+    // area that contains value & input
+    valueContainer: (provided) => ({
+      ...provided,
+      height: 28,
+      padding: '0 8px',
+    }),
+    // input itself (text cursor area)
+    input: (provided) => ({
+      ...provided,
+      margin: 0,
+      padding: 0,
+    }),
+    // the selected value text (single)
+    singleValue: (provided) => ({
+      ...provided,
+      marginTop: 17,
+      transform: 'translateY(-50%)',
+    }),
+    // indicators on the right (chevron, clear)
+    indicatorsContainer: (provided) => ({
+      ...provided,
+      height: 28,
+    }),
+    // controls the dropdown option height/padding
+    option: (provided) => ({
+      ...provided,
+      padding: '10px 12px',
+      minHeight: 38,
+    }),
+  };
   return (
     <div className="app" ref={appRef}>
       <div className="title_container">
@@ -150,6 +188,7 @@ function App() {
           </div>
           <div className="selection_container">
             <div className="selector_container">
+
               {data
               && (
               <Select
@@ -159,6 +198,7 @@ function App() {
                 isClearable
                 isDisabled={false}
                 isLoading={false}
+                styles={customStyles}
                 isRtl={false}
                 isSearchable
                 name="country"
