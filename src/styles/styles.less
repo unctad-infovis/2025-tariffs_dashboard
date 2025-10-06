@@ -40,10 +40,13 @@
     }
   }
   .controls_container {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     gap: 10px;
+    margin-bottom: 20px;
     padding: 0 5px;
+    width: 100%;
     @media all and (max-width: 900px) {
       flex-direction: column;
     }
@@ -73,6 +76,7 @@
         display: flex;
         flex-wrap: wrap;
         margin: 0px 0 5px 0;
+        width: 100%;
         .selector_container {
           align-items: center;
           display: flex;
@@ -85,10 +89,17 @@
             cursor: pointer;
             font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
             outline: 0;
-            padding: 3px 15px;
+            padding: 3px 10px;
+            &:hover {
+              color: #000;
+            }
             &.active {
               background-color: #009edb;
               color: #fff;
+              &:hover {
+                color: #fff;
+                opacity: 0.7;
+              }
             }
             .title {
               font-size: 16px;
@@ -171,12 +182,11 @@
     }
   }
   .visualization_container {
-    height: 100%;
     overflow: hidden;
     margin-bottom: 15px;
     position: relative;
     p {
-      margin-top: 30px;
+      margin: 5px 0 5px 0;
       padding-left: 5px;
     }
     .map_wrapper {
@@ -191,6 +201,8 @@
     .swarm_wrapper {
       background-color: #f2f8fc;
       box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
       height: 100%;
       max-width: 400px;
       position: absolute;
@@ -207,7 +219,6 @@
         width: 100%;
       }
       .swarm_controls_container {
-        position: absolute;
         button {
           background-color: #009edb;
           border: 0;
@@ -217,6 +228,9 @@
           line-height: 25px;
           padding: 0px;
           width: 35px;
+          &:hover {
+            opacity: 0.7
+          }
         }
       }
       .swarm_tooltip {
@@ -249,14 +263,16 @@
           transform: translateX(-50%);
         }
       }
-
+      .swarm_tooltip {
+        position: absolute;
+      }
       .swarm_container {
-        align-items: center;
-        display: flex;
+        display: inline-block;
+        position: relative;
         height: 100%;
-        justify-content: center;
         width: 100%;
         svg {
+          position: relative;
           display: block;
         }
       }

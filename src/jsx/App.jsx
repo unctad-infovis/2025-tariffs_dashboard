@@ -80,38 +80,38 @@ function App() {
   // outer control (border, background)
     control: (provided, state) => ({
       ...provided,
-      minHeight: 28, // control height
-      height: 28,
       boxShadow: state.isFocused ? provided.boxShadow : null,
+      height: 28,
+      minHeight: 28 // control height
     }),
     // area that contains value & input
     valueContainer: (provided) => ({
       ...provided,
       height: 28,
-      padding: '0 8px',
+      padding: '0 8px'
     }),
     // input itself (text cursor area)
     input: (provided) => ({
       ...provided,
       margin: 0,
-      padding: 0,
+      padding: 0
     }),
     // the selected value text (single)
     singleValue: (provided) => ({
       ...provided,
       marginTop: 17,
-      transform: 'translateY(-50%)',
+      transform: 'translateY(-50%)'
     }),
     // indicators on the right (chevron, clear)
     indicatorsContainer: (provided) => ({
       ...provided,
-      height: 28,
+      height: 28
     }),
     // controls the dropdown option height/padding
     option: (provided) => ({
       ...provided,
-      padding: '10px 12px',
       minHeight: 38,
+      padding: '10px 12px'
     }),
   };
   return (
@@ -270,17 +270,16 @@ function App() {
                 </button>
               )}
             </div>
-
             <p>
-              <strong>Mapping the size</strong>
+              <strong>Mapping the difference</strong>
               <br />
               Trade-weighted average
             </p>
             <ChartSwarm
               category={category}
               country={country}
-              swarm_collapsed={swarmState}
               setCountry={setCountry}
+              swarm_collapsed={swarmState}
               type={type}
               values={data}
             />

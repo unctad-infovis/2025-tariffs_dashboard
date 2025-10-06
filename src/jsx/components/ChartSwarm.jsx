@@ -37,8 +37,8 @@ function ChartSwarm({
 
   const yScale = useMemo(
     () => scaleLinear()
-      .domain([-10, 54])
-      .range([containerSize.height - 20, 20])
+      .domain([0, 54])
+      .range([containerSize.height - 10, 20])
       .clamp(true),
     [containerSize.height]
   );
@@ -88,7 +88,7 @@ function ChartSwarm({
     const simulation = forceSimulation(initialNodes)
       .force('forceX', forceX(centerX).strength((swarm_collapsed === 'full') ? 0.01 : 0.02))
       // .force('forceY', forceY(d => yScale(parseFloat(d.data[type][category]) || 0)).strength((swarm_collapsed === 'full') ? 9 : 1.5))
-      .force('collide', forceCollide(d => (d.r * ((swarm_collapsed === 'full') ? 1.4 : 1.25))))
+      .force('collide', forceCollide(d => (d.r * ((swarm_collapsed === 'full') ? 1.4 : 1.2))))
       .force('lockY', () => {
         initialNodes.forEach(node => {
           node.y = yScale(parseFloat(node.data[type][category]) || 0);
@@ -103,7 +103,7 @@ function ChartSwarm({
   }, [values, containerSize, category, type, country, swarm_collapsed, yScale]);
 
   return (
-    <div ref={chartSwarmRef} style={{ width: '100%', height: '100%' }}>
+    <div ref={chartSwarmRef} className="swarm_container">
       <Tooltip ref={tooltipRef} />
       <svg width={containerSize.width} height={containerSize.height}>
         {nodes.map(circle => (

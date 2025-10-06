@@ -9,7 +9,7 @@ function Axis({ scale = null, width = 0 }) {
   useEffect(() => {
     if (axisRef.current && scale) {
       const axis = axisRight(scale)
-        .tickValues([0, 10, 20, 30, 40, 50]) // only show 10,20,30,40
+        .tickValues([0, 10, 20, 30, 40, 50]) // only show 10,20,30,40,50
         .tickFormat(d => `${d}%`) // append %
         .tickSize(0); // no default short ticks
 
@@ -19,20 +19,28 @@ function Axis({ scale = null, width = 0 }) {
       // Remove vertical domain line
       g.select('.domain').remove();
 
-      // Style grid lines
+      // Style all grid lines
       g.selectAll('.tick line')
         .attr('x2', -width + 40) // draw grid lines to the left
         .attr('stroke-dasharray', '2,2')
-        .attr('stroke', '#AEA29A') // your line color
+        .attr('stroke', '#AEA29A')
         .attr('stroke-width', 0.5);
 
       // Style labels
       g.selectAll('.tick text')
-        .attr('x', -25) // small padding from right axis line
-        .attr('dy', '-0.30em') // shift upward so it's on top of line
+        .attr('x', -25)
+        .attr('dy', '-0.30em')
         .attr('text-anchor', 'start')
-        .style('fill', '#7c7067') // your text color
+        .style('fill', '#7c7067')
         .style('font-size', '12px');
+
+      // 🔹 Make the 0% line solid and thicker
+      g.selectAll('.tick')
+        .filter(d => d === 0)
+        .select('line')
+        .attr('stroke', '#777')
+        .attr('stroke-dasharray', 'none')
+        .attr('stroke-width', 1.2);
     }
   }, [scale, width]);
 
