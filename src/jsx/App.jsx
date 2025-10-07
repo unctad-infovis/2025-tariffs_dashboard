@@ -117,78 +117,81 @@ function App() {
   return (
     <div className="app" ref={appRef}>
       <div className="title_container">
-        <img src="https://static.dwcdn.net/custom/themes/unctad-2024-rebrand/Blue%20arrow.svg" className="logo" alt="UN Trade and Development logo" />
-        <div className="title">
-          <h3>How much have US tariffs really changed?</h3>
-          <h4>Public discussions tend to focus on “reciprocal” tariffs, but they are only part of the story. Applied tariffs differ also because of older tariff rules, exemptions, and sectoral tariffs.</h4>
-        </div>
-      </div>
-      <div className="controls_container">
-        <div className="control_container">
-          <div className="label_container">
-            <h4>
-              <span>1</span>
-              Select time frame
-            </h4>
+        <div className="main_title_container">
+          <img src="https://static.dwcdn.net/custom/themes/unctad-2024-rebrand/Blue%20arrow.svg" className="logo" alt="UN Trade and Development logo" />
+          <div className="title">
+            <h3>How much have US tariffs really changed?</h3>
           </div>
-          <div className="selection_container type_selection">
-            <div className="selector_container">
-              <button type="button" className="active" value="pre" onClick={(event) => changeType(event.currentTarget)}>
-                <div className="title">Pre January 2025</div>
-              </button>
+        </div>
+        <h4>Public discussions tend to focus on “reciprocal” tariffs, but they are only part of the story. Applied tariffs differ also because of older tariff rules, exemptions, and sectoral tariffs.</h4>
+      </div>
+      <div className="visualizations_container">
+        <div className="controls_container">
+          <div className="control_container">
+            <div className="label_container">
+              <h4>
+                <span>1</span>
+                Select time frame
+              </h4>
             </div>
-            {/* <div className="selector_container">
+            <div className="selection_container type_selection">
+              <div className="selector_container">
+                <button type="button" className="active" value="pre" onClick={(event) => changeType(event.currentTarget)}>
+                  <div className="title">Pre January 2025</div>
+                </button>
+              </div>
+              {/* <div className="selector_container">
               <button type="button" value="during" onClick={(event) => changeType(event.currentTarget)}>
                 <div className="title">June 2025</div>
               </button>
             </div> */}
-            <div className="selector_container">
-              <button type="button" value="now" onClick={(event) => changeType(event.currentTarget)}>
-                <div className="title">Current tariffs</div>
-              </button>
+              <div className="selector_container">
+                <button type="button" value="now" onClick={(event) => changeType(event.currentTarget)}>
+                  <div className="title">Current tariffs</div>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="control_container">
-          <div className="label_container">
-            <h4>
-              <span>2</span>
-              Select type of product
-            </h4>
+          <div className="control_container">
+            <div className="label_container">
+              <h4>
+                <span>2</span>
+                Select type of product
+              </h4>
+            </div>
+            <div className="selection_container category_selection">
+              <div className="selector_container">
+                <button type="button" className="active all" value="total" onClick={(event) => changeCategory(event.currentTarget)}>
+                  <div className="title">ALL</div>
+                </button>
+              </div>
+              <div className="selector_container">
+                <button type="button" value="manufacturing" onClick={(event) => changeCategory(event.currentTarget)}>
+                  <div className="title">Manufacturing</div>
+                </button>
+              </div>
+              <div className="selector_container">
+                <button type="button" value="agriculture" onClick={(event) => changeCategory(event.currentTarget)}>
+                  <div className="title">Agriculture</div>
+                </button>
+              </div>
+              <div className="selector_container">
+                <button type="button" value="fuels_mining" onClick={(event) => changeCategory(event.currentTarget)}>
+                  <div className="title">Fuels &amp; mining</div>
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="selection_container category_selection">
-            <div className="selector_container">
-              <button type="button" className="active" value="total" onClick={(event) => changeCategory(event.currentTarget)}>
-                <div className="title">All</div>
-              </button>
+          <div className="control_container">
+            <div className="label_container">
+              <h4>
+                <span>3</span>
+                Select economy
+              </h4>
             </div>
-            <div className="selector_container">
-              <button type="button" value="manufacturing" onClick={(event) => changeCategory(event.currentTarget)}>
-                <div className="title">Manufacturing</div>
-              </button>
-            </div>
-            <div className="selector_container">
-              <button type="button" value="agriculture" onClick={(event) => changeCategory(event.currentTarget)}>
-                <div className="title">Agriculture</div>
-              </button>
-            </div>
-            <div className="selector_container">
-              <button type="button" value="fuels_mining" onClick={(event) => changeCategory(event.currentTarget)}>
-                <div className="title">Fuels &amp; mining</div>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="control_container">
-          <div className="label_container">
-            <h4>
-              <span>3</span>
-              Select economy
-            </h4>
-          </div>
-          <div className="selection_container">
-            <div className="selector_container">
-              {data
+            <div className="selection_container">
+              <div className="selector_container">
+                {data
               && (
               <Select
                 className="basic-single"
@@ -207,37 +210,37 @@ function App() {
                 placeholder="Select economy "
               />
               )}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="legend_container">
-        <div className="legend_item developed">Developed</div>
-        <div className="legend_item developing">Developing</div>
-        <div className="legend_item ldc">Least developed</div>
-        <div className="legend_item selected">Selected country</div>
-      </div>
-      <div className="visualization_container">
-        <div className="map_wrapper">
-          <p>
-            <strong>Mapping the size</strong>
-            <br />
-            Trade-weighted average
-            {' '}
-            <span title="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024.">i</span>
-          </p>
-          {data !== false && (
-          <ChartMap
-            category={category}
-            country={country}
-            swarm_collapsed={swarmState}
-            setCountry={setCountry}
-            type={type}
-            values={data}
-          />
-          )}
+        <div className="legend_container">
+          <div className="legend_item developed">Developed</div>
+          <div className="legend_item developing">Developing</div>
+          <div className="legend_item ldc">Least developed</div>
+          <div className="legend_item selected">Selected country</div>
         </div>
-        {data !== false && (
+        <div className="visualization_container">
+          <div className="map_wrapper">
+            <p>
+              <strong>Mapping the size</strong>
+              <br />
+              Trade-weighted average
+              {' '}
+              <i className="fa-solid fa-circle-info" aria-hidden="true" title="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024.">i</i>
+            </p>
+            {data !== false && (
+            <ChartMap
+              category={category}
+              country={country}
+              swarm_collapsed={swarmState}
+              setCountry={setCountry}
+              type={type}
+              values={data}
+            />
+            )}
+          </div>
+          {data !== false && (
           <div className={`swarm_wrapper ${swarmState}`}>
             <div className="swarm_controls_container">
               {swarmState !== 'full' && (
@@ -276,7 +279,7 @@ function App() {
               <br />
               Trade-weighted average
               {' '}
-              <span title="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024.">i</span>
+              <i className="fa-solid fa-circle-info" aria-hidden="true" title="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024.">i</i>
             </p>
             <ChartSwarm
               category={category}
@@ -287,18 +290,19 @@ function App() {
               values={data}
             />
           </div>
-        )}
-      </div>
-      <div className="caption_container">
-        <em>Source:</em>
-        {' '}
-        UN Trade and Development (UNCTAD) based on USITC and US presidential actions, including the Executive Orders published by the White House.
-        <br />
-        <em>Note:</em>
-        {' '}
-        rade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Agriculture includes agricultural raw materials and food. Fuels and mining include fuels, ores, metals, precious stones and non-monetary gold. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Data updated as of 12 September 2025.
-        {' '}
-        <a href="https://unctad.org/page/map-disclaimer" target="_blank" rel="noreferrer">Map disclaimer</a>
+          )}
+        </div>
+        <div className="caption_container">
+          <em>Source:</em>
+          {' '}
+          UN Trade and Development (UNCTAD) based on USITC and US presidential actions, including the Executive Orders published by the White House.
+          <br />
+          <em>Note:</em>
+          {' '}
+          rade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Agriculture includes agricultural raw materials and food. Fuels and mining include fuels, ores, metals, precious stones and non-monetary gold. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Data updated as of 12 September 2025.
+          {' '}
+          <a href="https://unctad.org/page/map-disclaimer" target="_blank" rel="noreferrer">Map disclaimer</a>
+        </div>
       </div>
     </div>
   );
