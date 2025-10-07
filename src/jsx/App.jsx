@@ -200,14 +200,14 @@ function App() {
                 isClearable
                 isDisabled={false}
                 isLoading={false}
-                styles={customStyles}
                 isRtl={false}
                 isSearchable
                 name="country"
-                value={country}
                 onChange={(selectedOption) => changeCountry(selectedOption)}
                 options={data[1].slice().sort((a, b) => a.Country.localeCompare(b.Country)).map((el) => ({ value: el.Country, label: el.Country }))}
                 placeholder="Select economy "
+                styles={customStyles}
+                value={country}
               />
               )}
               </div>
@@ -243,7 +243,7 @@ function App() {
           {data !== false && (
           <div className={`swarm_wrapper ${swarmState}`}>
             <div className="swarm_controls_container">
-              {swarmState !== 'full' && (
+              {swarmState !== 'full' && appRef.current.offsetWidth < 900 && (
               <button
                 type="button"
                 onClick={() => {

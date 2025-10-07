@@ -30,15 +30,15 @@ function ChartMap({
     const container = document.querySelector('.map_container');
     if (!container) return;
 
-    container.style.transform = (swarm_collapsed === 'collapsed') ? 'translateX(0)' : 'translateX(-200px)';
+    container.style.width = (swarm_collapsed === 'collapsed') ? 'calc(100% - 40px)' : 'calc(100% - 400px)';
 
-    if (chartMapRef.current?.mapNavigation) {
-      chartMapRef.current.mapNavigation.update({
-        buttonOptions: {
-          x: swarm_collapsed === 'collapsed' ? 0 : 200
-        }
-      });
-    }
+    // if (chartMapRef.current?.mapNavigation) {
+    //   chartMapRef.current.mapNavigation.update({
+    //     buttonOptions: {
+    //       x: swarm_collapsed === 'collapsed' ? 0 : 200
+    //     }
+    //   });
+    // }
   }, [swarm_collapsed]);
 
   useEffect(() => {
