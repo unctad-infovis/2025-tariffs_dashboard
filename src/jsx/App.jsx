@@ -120,7 +120,7 @@ function App() {
         <img src="https://static.dwcdn.net/custom/themes/unctad-2024-rebrand/Blue%20arrow.svg" className="logo" alt="UN Trade and Development logo" />
         <div className="title">
           <h3>How much have US tariffs really changed?</h3>
-          <h4>Public discussions tend to focus on “reciprocal” tariffs, but they are only part of the story. Applied tariffs differ also because of older tariff rules, exemptions, and sectoral tariffs. By weighting tariffs according to the products each country actually exports to the US, UNCTAD calculates the effective tariff rate they face.</h4>
+          <h4>Public discussions tend to focus on “reciprocal” tariffs, but they are only part of the story. Applied tariffs differ also because of older tariff rules, exemptions, and sectoral tariffs.</h4>
         </div>
       </div>
       <div className="controls_container">
@@ -137,11 +137,11 @@ function App() {
                 <div className="title">Pre January 2025</div>
               </button>
             </div>
-            <div className="selector_container">
+            {/* <div className="selector_container">
               <button type="button" value="during" onClick={(event) => changeType(event.currentTarget)}>
                 <div className="title">June 2025</div>
               </button>
-            </div>
+            </div> */}
             <div className="selector_container">
               <button type="button" value="now" onClick={(event) => changeType(event.currentTarget)}>
                 <div className="title">Current tariffs</div>
@@ -183,12 +183,11 @@ function App() {
           <div className="label_container">
             <h4>
               <span>3</span>
-              Select a country
+              Select economy
             </h4>
           </div>
           <div className="selection_container">
             <div className="selector_container">
-
               {data
               && (
               <Select
@@ -205,7 +204,7 @@ function App() {
                 value={country}
                 onChange={(selectedOption) => changeCountry(selectedOption)}
                 options={data[1].slice().sort((a, b) => a.Country.localeCompare(b.Country)).map((el) => ({ value: el.Country, label: el.Country }))}
-                placeholder="Select a country"
+                placeholder="Select economy "
               />
               )}
             </div>
@@ -224,6 +223,8 @@ function App() {
             <strong>Mapping the size</strong>
             <br />
             Trade-weighted average
+            {' '}
+            <span title="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024.">i</span>
           </p>
           {data !== false && (
           <ChartMap
@@ -255,7 +256,7 @@ function App() {
               </button>
               )}
               {' '}
-              {appRef.current.offsetWidth > 900 && (
+              {appRef.current.offsetWidth > 900 && false && (
                 <button
                   type="button"
                   onClick={() => {
@@ -274,6 +275,8 @@ function App() {
               <strong>Mapping the difference</strong>
               <br />
               Trade-weighted average
+              {' '}
+              <span title="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024.">i</span>
             </p>
             <ChartSwarm
               category={category}
@@ -293,7 +296,7 @@ function App() {
         <br />
         <em>Note:</em>
         {' '}
-        Trade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Tariffs in June 2025 reflect the situation during 90-day pause. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Data updated as of 12 September 2025.
+        rade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Agriculture includes agricultural raw materials and food. Fuels and mining include fuels, ores, metals, precious stones and non-monetary gold. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Data updated as of 12 September 2025.
         {' '}
         <a href="https://unctad.org/page/map-disclaimer" target="_blank" rel="noreferrer">Map disclaimer</a>
       </div>
