@@ -201,7 +201,7 @@ function ChartMap({
       },
       mapNavigation: {
         buttonOptions: {
-          x: 200,
+          x: 0,
           verticalAlign: 'bottom'
         },
         enableButtons: true,
