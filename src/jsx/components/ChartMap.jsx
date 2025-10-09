@@ -403,6 +403,7 @@ function ChartMap({
   return (
     <div className="map_container">
       <div id="map_container" ref={chartMapRef} />
+      <div className="caption_tooltip"><button type="button">Source / Note</button></div>
     </div>
   );
 }
