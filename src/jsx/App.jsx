@@ -117,13 +117,24 @@ function App() {
   return (
     <div className="app" ref={appRef}>
       <div className="title_container">
-        <div className="main_title_container">
-          <img src="https://static.dwcdn.net/custom/themes/unctad-2024-rebrand/Blue%20arrow.svg" className="logo" alt="UN Trade and Development logo" />
-          <div className="title">
-            <h3>How much have US tariffs really changed?</h3>
+        <div className="text_container">
+          <div className="main_title_container">
+            <img src="https://static.dwcdn.net/custom/themes/unctad-2024-rebrand/Blue%20arrow.svg" className="logo" alt="UN Trade and Development logo" />
+            <div className="title">
+              <h3>How much have US tariffs really changed?</h3>
+            </div>
           </div>
+          <h4>Public discussions tend to focus on “reciprocal” tariffs, but they are only part of the story. Applied tariffs differ also because of older tariff rules, exemptions, and sectoral tariffs.</h4>
         </div>
-        <h4>Public discussions tend to focus on “reciprocal” tariffs, but they are only part of the story. Applied tariffs differ also because of older tariff rules, exemptions, and sectoral tariffs.</h4>
+        <div className="qr_code_container">
+          <div className="text">
+            Explore our
+            {' '}
+            <br />
+            <strong>Tariff Tracker</strong>
+          </div>
+          <div className="qrcode"><img src="./assets/img/qrcode.png" alt="qrcode" /></div>
+        </div>
       </div>
       <div className="visualizations_container">
         <div className="content">

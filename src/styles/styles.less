@@ -12,35 +12,64 @@
     outline: none;
   }
   .title_container {
-    max-width: 1350px;
     margin: auto auto;
     margin-bottom: 50px;
     padding: 0 10px;
-    .main_title_container {
-      align-items: center;
-      display: flex;
-      gap: 10px;
-      margin-bottom: 25px;
-      img {
-        height: 30px;
-        width: 30px;
-      }
-      .title {
-        h3 {
-          color: #000;
-          font-size: 30px;
-          font-weight: 700;
-          line-height: 34px;
-          margin: 0 0 2px 0;
+    display: flex;
+    flex-direction: row;
+    .text_container {
+      width: 100%;
+      .main_title_container {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 25px;
+        img {
+          height: 30px;
+          width: 30px;
+        }
+        .title {
+          h3 {
+            color: #000;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 34px;
+            margin: 0 0 2px 0;
+          }
         }
       }
+      h4 {
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        margin: 0 0 0 0;
+      }
     }
-    h4 {
-      color: rgba(0, 0, 0, 0.8);
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 18px;
-      margin: 0 0 0 0;
+    .qr_code_container {
+      background-color: #f4f9fd;
+      height: 135px;
+      padding: 5px;
+      color: #0077b8;
+      flex: 1 0 auto;
+      box-sizing: border-box;
+      width: 270px;
+      display: flex;
+      align-items: center;
+      .text {
+        padding: 0 10px;
+        text-align: center;
+        width: 100%;
+      }
+      .qrcode {
+        min-width: 125px;
+        width: 125px;
+        font-size: 0;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
   .visualizations_container {
@@ -48,7 +77,6 @@
     padding: 50px 0;
     .content {
       margin: auto auto;
-      max-width: 1350px;
       .controls_container {
         box-sizing: border-box;
         display: flex;
