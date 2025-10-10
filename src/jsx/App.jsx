@@ -8,6 +8,7 @@ import 'intersection-observer';
 import { useIsVisible } from 'react-is-visible';
 
 import Select from 'react-select';
+import { Tooltip } from 'react-tooltip';
 
 // Load helpers.
 import ChartMap from './components/ChartMap.jsx';
@@ -239,7 +240,7 @@ function App() {
                 <br />
                 Trade-weighted average
                 {' '}
-                <i className="fa-solid fa-circle-info" aria-hidden="true" title="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024.">i</i>
+                <i className="circle_info" aria-hidden="true" data-tooltip-id="my-tooltip-1" title="">i</i>
               </p>
               {data !== false && (
                 <ChartMap
@@ -291,7 +292,7 @@ function App() {
                   <br />
                   Trade-weighted average
                   {' '}
-                  <i className="fa-solid fa-circle-info" aria-hidden="true" title="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024.">i</i>
+                  <i className="circle_info" aria-hidden="true" data-tooltip-id="my-tooltip-1" title="">i</i>
                 </p>
                 <ChartSwarm
                   category={category}
@@ -305,18 +306,42 @@ function App() {
             )}
           </div>
           <div className="caption_container">
-            <em>Source:</em>
+            <em />
             {' '}
-            UN Trade and Development (UNCTAD) based on USITC and US presidential actions, including the Executive Orders published by the White House.
+
             <br />
-            <em>Note:</em>
+
             {' '}
-            rade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Agriculture includes agricultural raw materials and food. Fuels and mining include fuels, ores, metals, precious stones and non-monetary gold. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Data updated as of 12 September 2025.
+
             {' '}
-            <a href="https://unctad.org/page/map-disclaimer" target="_blank" rel="noreferrer">Map disclaimer</a>
+
           </div>
         </div>
       </div>
+      <Tooltip
+        className="my_tooltip"
+        id="my-tooltip-1"
+        place="top"
+        content="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024."
+      />
+      <Tooltip
+        className="my_tooltip"
+        id="my-tooltip-2"
+        place="top"
+      >
+        <>
+          <em>Source:</em>
+          {' '}
+          UN Trade and Development (UNCTAD) based on USITC and US presidential actions, including the Executive Orders published by the White House.
+          <br />
+          <em>Note:</em>
+          {' '}
+          Trade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Agriculture includes agricultural raw materials and food. Fuels and mining include fuels, ores, metals, precious stones and non-monetary gold. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Data updated as of 12 September 2025.
+          {' '}
+          <a href="https://unctad.org/page/map-disclaimer" target="_blank" rel="noreferrer">Map disclaimer</a>
+          .
+        </>
+      </Tooltip>
     </div>
   );
 }
