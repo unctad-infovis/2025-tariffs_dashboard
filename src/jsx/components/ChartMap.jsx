@@ -403,7 +403,6 @@ function ChartMap({
   return (
     <div className="map_container">
       <div id="map_container" ref={chartMapRef} />
-      <div className="caption_tooltip"><button type="button" data-tooltip-id="my-tooltip-2" data-tooltip-delay-hide={1000}>Source / Note</button></div>
     </div>
   );
 }
