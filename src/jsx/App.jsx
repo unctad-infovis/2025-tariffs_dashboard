@@ -23,6 +23,7 @@ function App() {
   const [type, setType] = useState('pre');
   const [category, setCategory] = useState('total');
   const [country, setCountry] = useState(null);
+  const [hoverCountry, setHoverCountry] = useState(null);
 
   const [swarmState, setSwarmState] = useState('expanded');
 
@@ -75,6 +76,7 @@ function App() {
 
   const changeCountry = (option) => {
     setCountry(option && (!Array.isArray(option) || option.length) ? option : null);
+    setHoverCountry(option && (!Array.isArray(option) || option.length) ? option : null);
   };
 
   const customStyles = {
@@ -237,8 +239,10 @@ function App() {
                 <ChartMap
                   category={category}
                   country={country}
+                  hover_country={hoverCountry}
                   swarm_collapsed={swarmState}
                   setCountry={setCountry}
+                  setHoverCountry={setHoverCountry}
                   type={type}
                   values={data}
                 />
@@ -288,7 +292,9 @@ function App() {
                 <ChartSwarm
                   category={category}
                   country={country}
+                  hover_country={hoverCountry}
                   setCountry={setCountry}
+                  setHoverCountry={setHoverCountry}
                   swarm_collapsed={swarmState}
                   type={type}
                   values={data}
