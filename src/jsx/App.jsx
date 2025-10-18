@@ -127,7 +127,7 @@ function App() {
               <h3>How much have US tariffs really changed?</h3>
             </div>
           </div>
-          <h4>Public discussions tend to focus on “reciprocal” tariffs, but they are only part of the story. Applied tariffs differ also because of older tariff rules, exemptions, and sectoral tariffs.</h4>
+          {/*<h4>Public discussions tend to focus on “reciprocal” tariffs, but they are only part of the story. Applied tariffs differ also because of older tariff rules, exemptions, and sectoral tariffs.</h4>*/}
         </div>
       </div>
       <div className="visualizations_container">
@@ -309,7 +309,7 @@ function App() {
             <br />
             <em>Note:</em>
             {' '}
-            Trade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Agriculture includes agricultural raw materials and food. Fuels and mining include fuels, ores, metals, precious stones and non-monetary gold. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Data updated as of 14 October 2025.
+            Trade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Agriculture includes agricultural raw materials and food. Fuels and mining include fuels, ores, metals, precious stones and non-monetary gold. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Classification of goods by sectors according to UNCTAD Handbook of Statistics 2024; more goods are contained in total results than in the three broad sectoral groups. Data updated as of 14 October 2025.
             {' '}
             <a href="https://unctad.org/page/map-disclaimer" target="_blank" rel="noreferrer">Map disclaimer</a>
             .
