@@ -127,7 +127,7 @@ function App() {
               <h3>How much have US tariffs really changed?</h3>
             </div>
           </div>
-          {/*<h4>Public discussions tend to focus on “reciprocal” tariffs, but they are only part of the story. Applied tariffs differ also because of older tariff rules, exemptions, and sectoral tariffs.</h4>*/}
+          {/* <h4>Public discussions tend to focus on “reciprocal” tariffs, but they are only part of the story. Applied tariffs differ also because of older tariff rules, exemptions, and sectoral tariffs.</h4> */}
         </div>
       </div>
       <div className="visualizations_container">

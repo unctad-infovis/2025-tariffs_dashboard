@@ -16,7 +16,7 @@ import processTopoObjectPolygons from '../helpers/map/ProcessTopoObjectPolygons.
 import processTopoObject from '../helpers/map/ProcessTopoObject.js';
 import createMaplineSeries from '../helpers/map/CreateMaplineSeries.js';
 import getColor from '../helpers/map/GetColor.js';
-// import getColorAxis from '../helpers/map/GetColorAxis.js';
+// import getColorAxis from ' ../helpers/map/GetColorAxis.js';
 
 // https://www.npmjs.com/package/uuid4
 // import { v4 as uuidv4 } from 'uuid';
@@ -31,14 +31,6 @@ function ChartMap({
     if (!container) return;
 
     container.style.width = (swarm_collapsed === 'collapsed') ? 'calc(100% - 40px)' : 'calc(100% - 400px)';
-
-    // if (chartMapRef.current?.mapNavigation) {
-    //   chartMapRef.current.mapNavigation.update({
-    //     buttonOptions: {
-    //       x: swarm_collapsed === 'collapsed' ? 0 : 200
-    //     }
-    //   });
-    // }
   }, [swarm_collapsed]);
 
   useEffect(() => {
@@ -192,7 +184,7 @@ function ChartMap({
       },
       chart: {
         backgroundColor: 'transparent',
-        height: Math.max((document.getElementById('map_container').offsetWidth * 5) / 16, 455),
+        height: Math.max((document.getElementById('map_container').offsetWidth * 7) / 16, 450),
         type: 'map'
       },
       credits: {
@@ -335,6 +327,7 @@ function ChartMap({
             duration: 600,
             easing: 'easeOutQuad'
           },
+          clip: false,
           cursor: 'pointer',
           data: bubbleData,
           joinBy: null,
