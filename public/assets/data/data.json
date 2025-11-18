@@ -32,9 +32,9 @@
       },
       "now": {
         "fuels_mining": 14.9341,
-        "agriculture": 17.2994,
-        "manufacturing": 16.8832,
-        "total": 16.6628
+        "agriculture": 14.8326,
+        "manufacturing": 16.8291,
+        "total": 14.9865
       }
     },
     "code": "004"
@@ -52,9 +52,9 @@
       },
       "now": {
         "fuels_mining": 0.9074,
-        "agriculture": 7.0585,
-        "manufacturing": 22.4431,
-        "total": 1.1425
+        "agriculture": 3.9989,
+        "manufacturing": 22.4722,
+        "total": 1.1422
       }
     },
     "code": "024"
@@ -72,9 +72,9 @@
       },
       "now": {
         "fuels_mining": 27.0645,
-        "agriculture": 10.5209,
-        "manufacturing": 11.1846,
-        "total": 11.0331
+        "agriculture": 10.0209,
+        "manufacturing": 10.7677,
+        "total": 10.6013
       }
     },
     "code": "008"
@@ -91,10 +91,10 @@
         "total": 4.9558
       },
       "now": {
-        "fuels_mining": 20.657,
-        "agriculture": 13.7581,
-        "manufacturing": 25.5022,
-        "total": 19.0841
+        "fuels_mining": 20.6567,
+        "agriculture": 10.7649,
+        "manufacturing": 25.3196,
+        "total": 18.9486
       }
     },
     "code": "784"
@@ -111,10 +111,10 @@
         "total": 1.3143
       },
       "now": {
-        "fuels_mining": 8.3927,
-        "agriculture": 13.226,
-        "manufacturing": 11.7577,
-        "total": 10.4264
+        "fuels_mining": 8.3921,
+        "agriculture": 11.9064,
+        "manufacturing": 11.7576,
+        "total": 9.9782
       }
     },
     "code": "032"
@@ -132,9 +132,9 @@
       },
       "now": {
         "fuels_mining": 9.8759,
-        "agriculture": 13.427,
+        "agriculture": 13.0649,
         "manufacturing": 15.5386,
-        "total": 11.4646
+        "total": 11.4026
       }
     },
     "code": "051"
@@ -171,10 +171,10 @@
         "total": 0.0462
       },
       "now": {
-        "fuels_mining": 6.7172,
-        "agriculture": 10.1269,
-        "manufacturing": 12.151,
-        "total": 9.4775
+        "fuels_mining": 6.7104,
+        "agriculture": 4.5069,
+        "manufacturing": 12.0511,
+        "total": 7.6371
       }
     },
     "code": "036"
@@ -192,9 +192,9 @@
       },
       "now": {
         "fuels_mining": 51.7054,
-        "agriculture": 11.9969,
-        "manufacturing": 18.5108,
-        "total": 29.9266
+        "agriculture": 10.0915,
+        "manufacturing": 17.6804,
+        "total": 29.7412
       }
     },
     "code": "031"
@@ -212,9 +212,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 10,
+        "agriculture": 0,
         "manufacturing": 25.4012,
-        "total": 11.4885
+        "total": 2.4551
       }
     },
     "code": "108"
@@ -232,9 +232,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 10.4124,
+        "agriculture": 7.6535,
         "manufacturing": 25.8469,
-        "total": 10.7504
+        "total": 8.3147
       }
     },
     "code": "204"
@@ -252,9 +252,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 10.1604,
-        "manufacturing": 19.3772,
-        "total": 10.9907
+        "agriculture": 0.4437,
+        "manufacturing": 20.1183,
+        "total": 2.7741
       }
     },
     "code": "854"
@@ -272,9 +272,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 22.5156,
-        "manufacturing": 35.3094,
-        "total": 35.1067
+        "agriculture": 18.8613,
+        "manufacturing": 35.3085,
+        "total": 35.0789
       }
     },
     "code": "050"
@@ -293,8 +293,8 @@
       "now": {
         "fuels_mining": 36.6127,
         "agriculture": 10,
-        "manufacturing": 22.8548,
-        "total": 32.2555
+        "manufacturing": 22.8525,
+        "total": 32.255
       }
     },
     "code": "048"
@@ -312,9 +312,9 @@
       },
       "now": {
         "fuels_mining": 1.3608,
-        "agriculture": 10.0006,
+        "agriculture": 9.9947,
         "manufacturing": 10.5913,
-        "total": 1.4339
+        "total": 1.4336
       }
     },
     "code": "044"
@@ -332,9 +332,9 @@
       },
       "now": {
         "fuels_mining": 32.3899,
-        "agriculture": 32.144,
-        "manufacturing": 35.3176,
-        "total": 35.1143
+        "agriculture": 18.2221,
+        "manufacturing": 35.1244,
+        "total": 34.5736
       }
     },
     "code": "070"
@@ -352,9 +352,9 @@
       },
       "now": {
         "fuels_mining": 9.9394,
-        "agriculture": 9.732,
+        "agriculture": 9.0665,
         "manufacturing": 15.229,
-        "total": 9.0919
+        "total": 8.5137
       }
     },
     "code": "084"
@@ -372,9 +372,9 @@
       },
       "now": {
         "fuels_mining": 1.2108,
-        "agriculture": 15.3793,
+        "agriculture": 9.0621,
         "manufacturing": 13.2443,
-        "total": 5.6801
+        "total": 4.2183
       }
     },
     "code": "068"
@@ -392,9 +392,9 @@
       },
       "now": {
         "fuels_mining": 4.9255,
-        "agriculture": 41.6921,
-        "manufacturing": 39.0227,
-        "total": 28.8356
+        "agriculture": 36.9241,
+        "manufacturing": 38.5918,
+        "total": 27.4992
       }
     },
     "code": "076"
@@ -412,9 +412,9 @@
       },
       "now": {
         "fuels_mining": 6.2465,
-        "agriculture": 10.0048,
+        "agriculture": 9.8219,
         "manufacturing": 10.5815,
-        "total": 8.3626
+        "total": 8.2601
       }
     },
     "code": "052"
@@ -432,9 +432,9 @@
       },
       "now": {
         "fuels_mining": 0.1575,
-        "agriculture": 31.4,
-        "manufacturing": 26.4264,
-        "total": 20.7333
+        "agriculture": 6.4,
+        "manufacturing": 25.1666,
+        "total": 19.7409
       }
     },
     "code": "096"
@@ -452,9 +452,9 @@
       },
       "now": {
         "fuels_mining": 10,
-        "agriculture": 11.443,
+        "agriculture": 9.9226,
         "manufacturing": 11.5082,
-        "total": 11.1077
+        "total": 11.0957
       }
     },
     "code": "064"
@@ -513,8 +513,8 @@
       "now": {
         "fuels_mining": 4.9577,
         "agriculture": 5.1653,
-        "manufacturing": 20.8548,
-        "total": 12.0454
+        "manufacturing": 18.7655,
+        "total": 11.0905
       }
     },
     "code": "124"
@@ -531,10 +531,10 @@
         "total": 0.6052
       },
       "now": {
-        "fuels_mining": 5.962,
-        "agriculture": 40.4506,
-        "manufacturing": 12.9152,
-        "total": 12.7927
+        "fuels_mining": 5.9601,
+        "agriculture": 14.2883,
+        "manufacturing": 12.9115,
+        "total": 11.9561
       }
     },
     "code": "756"
@@ -551,10 +551,10 @@
         "total": 0.1354
       },
       "now": {
-        "fuels_mining": 0.8359,
-        "agriculture": 10.0953,
-        "manufacturing": 12.7164,
-        "total": 6.4426
+        "fuels_mining": 0.7926,
+        "agriculture": 9.603,
+        "manufacturing": 12.5153,
+        "total": 6.1854
       }
     },
     "code": "152"
@@ -571,10 +571,10 @@
         "total": 12.2907
       },
       "now": {
-        "fuels_mining": 62.0529,
-        "agriculture": 47.8274,
-        "manufacturing": 47.7169,
-        "total": 47.1328
+        "fuels_mining": 52.0188,
+        "agriculture": 36.3144,
+        "manufacturing": 37.7135,
+        "total": 37.2448
       }
     },
     "code": "156"
@@ -592,9 +592,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 12.3294,
+        "agriculture": 0.6828,
         "manufacturing": 12.7083,
-        "total": 12.2822
+        "total": 0.8609
       }
     },
     "code": "384"
@@ -612,9 +612,9 @@
       },
       "now": {
         "fuels_mining": 0.1115,
-        "agriculture": 10.1468,
+        "agriculture": 0.5594,
         "manufacturing": 8.3656,
-        "total": 4.5233
+        "total": 0.8936
       }
     },
     "code": "120"
@@ -632,9 +632,9 @@
       },
       "now": {
         "fuels_mining": 1.198,
-        "agriculture": 9.7551,
+        "agriculture": 6.1737,
         "manufacturing": 18.6381,
-        "total": 1.8825
+        "total": 1.6556
       }
     },
     "code": "180"
@@ -692,9 +692,9 @@
       },
       "now": {
         "fuels_mining": 0.5125,
-        "agriculture": 10.6169,
-        "manufacturing": 23.5178,
-        "total": 6.9508
+        "agriculture": 5.8819,
+        "manufacturing": 23.556,
+        "total": 5.7057
       }
     },
     "code": "170"
@@ -712,9 +712,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 10,
-        "manufacturing": 11.183,
-        "total": 10.2945
+        "agriculture": 0,
+        "manufacturing": 4.7514,
+        "total": 1.1829
       }
     },
     "code": "174"
@@ -732,9 +732,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 29.8971,
+        "agriculture": 28.5344,
         "manufacturing": 15.4452,
-        "total": 25.8227
+        "total": 24.747
       }
     },
     "code": "132"
@@ -751,10 +751,10 @@
         "total": 0.2563
       },
       "now": {
-        "fuels_mining": 5.4253,
-        "agriculture": 15.6112,
-        "manufacturing": 13.8363,
-        "total": 13.0982
+        "fuels_mining": 5.4216,
+        "agriculture": 3.3112,
+        "manufacturing": 13.8337,
+        "total": 10.5182
       }
     },
     "code": "188"
@@ -792,9 +792,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 11.6088,
+        "agriculture": 7.0888,
         "manufacturing": 20.1759,
-        "total": 0.6373
+        "total": 0.5099
       }
     },
     "code": "262"
@@ -812,9 +812,9 @@
       },
       "now": {
         "fuels_mining": 9.7465,
-        "agriculture": 10,
-        "manufacturing": 11.4893,
-        "total": 7.7721
+        "agriculture": 4.0282,
+        "manufacturing": 8.4429,
+        "total": 6.0097
       }
     },
     "code": "212"
@@ -831,10 +831,10 @@
         "total": 0.5182
       },
       "now": {
-        "fuels_mining": 21.2521,
-        "agriculture": 10.2161,
-        "manufacturing": 11.9441,
-        "total": 11.4742
+        "fuels_mining": 21.2514,
+        "agriculture": 7.8975,
+        "manufacturing": 11.9376,
+        "total": 10.8832
       }
     },
     "code": "214"
@@ -852,9 +852,9 @@
       },
       "now": {
         "fuels_mining": 0.07,
-        "agriculture": 32.0493,
-        "manufacturing": 32.5303,
-        "total": 5.4739
+        "agriculture": 31.973,
+        "manufacturing": 19.9492,
+        "total": 3.4552
       }
     },
     "code": "012"
@@ -872,9 +872,9 @@
       },
       "now": {
         "fuels_mining": 0.9991,
-        "agriculture": 17.1414,
-        "manufacturing": 27.8659,
-        "total": 9.7721
+        "agriculture": 11.559,
+        "manufacturing": 27.8427,
+        "total": 7.0986
       }
     },
     "code": "218"
@@ -892,9 +892,9 @@
       },
       "now": {
         "fuels_mining": 11.0448,
-        "agriculture": 14.6979,
-        "manufacturing": 27.0676,
-        "total": 24.2269
+        "agriculture": 13.7489,
+        "manufacturing": 26.2965,
+        "total": 23.4484
       }
     },
     "code": "818"
@@ -932,9 +932,9 @@
       },
       "now": {
         "fuels_mining": 9.5892,
-        "agriculture": 10.2341,
-        "manufacturing": 27.5263,
-        "total": 14.9514
+        "agriculture": 2.2371,
+        "manufacturing": 27.5261,
+        "total": 11.1386
       }
     },
     "code": "231"
@@ -951,10 +951,10 @@
         "total": 1.0829
       },
       "now": {
-        "fuels_mining": 8.7455,
-        "agriculture": 14.78,
-        "manufacturing": 10.7548,
-        "total": 10.3414
+        "fuels_mining": 8.7298,
+        "agriculture": 13.7775,
+        "manufacturing": 11.5143,
+        "total": 10.9267
       }
     },
     "code": "918"
@@ -972,9 +972,9 @@
       },
       "now": {
         "fuels_mining": 15,
-        "agriculture": 14.9119,
+        "agriculture": 14.123,
         "manufacturing": 17.6777,
-        "total": 14.7289
+        "total": 13.9587
       }
     },
     "code": "242"
@@ -1012,9 +1012,9 @@
       },
       "now": {
         "fuels_mining": 10,
-        "agriculture": 9.028,
+        "agriculture": 7.8626,
         "manufacturing": 11.6843,
-        "total": 9.1216
+        "total": 9.0032
       }
     },
     "code": "583"
@@ -1051,10 +1051,10 @@
         "total": 0.8478
       },
       "now": {
-        "fuels_mining": 2.8456,
-        "agriculture": 11.6418,
-        "manufacturing": 10.9259,
-        "total": 9.5164
+        "fuels_mining": 2.8411,
+        "agriculture": 11.009,
+        "manufacturing": 8.4563,
+        "total": 7.5052
       }
     },
     "code": "826"
@@ -1072,9 +1072,9 @@
       },
       "now": {
         "fuels_mining": 0.0055,
-        "agriculture": 11.1554,
+        "agriculture": 10.435,
         "manufacturing": 9.7775,
-        "total": 9.2315
+        "total": 9.1463
       }
     },
     "code": "268"
@@ -1092,9 +1092,9 @@
       },
       "now": {
         "fuels_mining": 0.8626,
-        "agriculture": 13.8113,
-        "manufacturing": 33.4188,
-        "total": 6.2463
+        "agriculture": 3.429,
+        "manufacturing": 33.4102,
+        "total": 3.3848
       }
     },
     "code": "288"
@@ -1112,9 +1112,9 @@
       },
       "now": {
         "fuels_mining": 7.1889,
-        "agriculture": 4.9012,
-        "manufacturing": 21.1992,
-        "total": 8.5539
+        "agriculture": 4.1824,
+        "manufacturing": 21.1806,
+        "total": 8.0796
       }
     },
     "code": "324"
@@ -1132,9 +1132,9 @@
       },
       "now": {
         "fuels_mining": 9.6998,
-        "agriculture": 10.3241,
+        "agriculture": 10.1749,
         "manufacturing": 15.4486,
-        "total": 10.5176
+        "total": 10.4547
       }
     },
     "code": "270"
@@ -1192,32 +1192,12 @@
       },
       "now": {
         "fuels_mining": 4.4374,
-        "agriculture": 10.0013,
+        "agriculture": 6.5991,
         "manufacturing": 12.3362,
-        "total": 9.0559
+        "total": 6.2581
       }
     },
     "code": "308"
-  },
-  {
-    "ISO3": "GRL",
-    "Country": "Greenland",
-    "dev_status": "Developed",
-    "data": {
-      "pre": {
-        "fuels_mining": 0,
-        "agriculture": 0.0022,
-        "manufacturing": 0.6476,
-        "total": 0.0092
-      },
-      "now": {
-        "fuels_mining": 10,
-        "agriculture": 10.0022,
-        "manufacturing": 12.002,
-        "total": 9.7737
-      }
-    },
-    "code": "304"
   },
   {
     "ISO3": "GTM",
@@ -1231,10 +1211,10 @@
         "total": 1.2015
       },
       "now": {
-        "fuels_mining": 2.7877,
-        "agriculture": 11.6906,
-        "manufacturing": 10.8923,
-        "total": 11.143
+        "fuels_mining": 2.774,
+        "agriculture": 5.8368,
+        "manufacturing": 10.8689,
+        "total": 7.5961
       }
     },
     "code": "320"
@@ -1252,9 +1232,9 @@
       },
       "now": {
         "fuels_mining": 0.0129,
-        "agriculture": 14.0626,
+        "agriculture": 13.6314,
         "manufacturing": 26.4196,
-        "total": 0.1831
+        "total": 0.1789
       }
     },
     "code": "328"
@@ -1271,10 +1251,10 @@
         "total": 1.0967
       },
       "now": {
-        "fuels_mining": 28.7019,
-        "agriculture": 31.7772,
-        "manufacturing": 28.1206,
-        "total": 15.593
+        "fuels_mining": 18.7019,
+        "agriculture": 20.013,
+        "manufacturing": 18.1219,
+        "total": 10.0548
       }
     },
     "code": "344"
@@ -1292,9 +1272,9 @@
       },
       "now": {
         "fuels_mining": 10.099,
-        "agriculture": 10.8899,
+        "agriculture": 5.4275,
         "manufacturing": 14.9478,
-        "total": 13.4933
+        "total": 12.0458
       }
     },
     "code": "340"
@@ -1312,9 +1292,9 @@
       },
       "now": {
         "fuels_mining": 2.8533,
-        "agriculture": 10.0334,
-        "manufacturing": 10.286,
-        "total": 10.2201
+        "agriculture": 8.3447,
+        "manufacturing": 10.1986,
+        "total": 10.1034
       }
     },
     "code": "332"
@@ -1331,10 +1311,10 @@
         "total": 5.921
       },
       "now": {
-        "fuels_mining": 21.9494,
-        "agriculture": 17.1101,
-        "manufacturing": 27.6195,
-        "total": 25.0718
+        "fuels_mining": 21.6832,
+        "agriculture": 14.0145,
+        "manufacturing": 27.5644,
+        "total": 24.3332
       }
     },
     "code": "360"
@@ -1351,10 +1331,10 @@
         "total": 3.2762
       },
       "now": {
-        "fuels_mining": 36.5812,
-        "agriculture": 51.0101,
-        "manufacturing": 33.706,
-        "total": 34.954
+        "fuels_mining": 36.5558,
+        "agriculture": 42.4745,
+        "manufacturing": 33.624,
+        "total": 34.2963
       }
     },
     "code": "356"
@@ -1392,9 +1372,9 @@
       },
       "now": {
         "fuels_mining": 0.1088,
-        "agriculture": 39.89,
+        "agriculture": 36.3792,
         "manufacturing": 34.6704,
-        "total": 0.1952
+        "total": 0.1943
       }
     },
     "code": "368"
@@ -1412,9 +1392,9 @@
       },
       "now": {
         "fuels_mining": 15.4545,
-        "agriculture": 15.3341,
+        "agriculture": 15.2443,
         "manufacturing": 8.4324,
-        "total": 11.152
+        "total": 11.1158
       }
     },
     "code": "352"
@@ -1431,10 +1411,10 @@
         "total": 0.4417
       },
       "now": {
-        "fuels_mining": 14.0708,
-        "agriculture": 15.0009,
-        "manufacturing": 10.0412,
-        "total": 10.5893
+        "fuels_mining": 14.0562,
+        "agriculture": 10.6164,
+        "manufacturing": 9.8546,
+        "total": 10.3413
       }
     },
     "code": "376"
@@ -1452,9 +1432,9 @@
       },
       "now": {
         "fuels_mining": 1.1195,
-        "agriculture": 10.5846,
-        "manufacturing": 11.1515,
-        "total": 7.3172
+        "agriculture": 7.93,
+        "manufacturing": 10.878,
+        "total": 5.7919
       }
     },
     "code": "388"
@@ -1472,9 +1452,9 @@
       },
       "now": {
         "fuels_mining": 48.3745,
-        "agriculture": 15.2797,
-        "manufacturing": 15.7362,
-        "total": 15.4542
+        "agriculture": 9.593,
+        "manufacturing": 15.0277,
+        "total": 14.685
       }
     },
     "code": "400"
@@ -1491,10 +1471,10 @@
         "total": 1.8022
       },
       "now": {
-        "fuels_mining": 14.3233,
-        "agriculture": 15.3137,
-        "manufacturing": 19.9132,
-        "total": 19.447
+        "fuels_mining": 14.0924,
+        "agriculture": 13.1928,
+        "manufacturing": 17.8197,
+        "total": 17.4117
       }
     },
     "code": "392"
@@ -1512,9 +1492,9 @@
       },
       "now": {
         "fuels_mining": 0.9717,
-        "agriculture": 25.0998,
-        "manufacturing": 4.5632,
-        "total": 2.2538
+        "agriculture": 25.0898,
+        "manufacturing": 4.5479,
+        "total": 2.2488
       }
     },
     "code": "398"
@@ -1532,9 +1512,9 @@
       },
       "now": {
         "fuels_mining": 0.9022,
-        "agriculture": 11.0125,
-        "manufacturing": 33.3785,
-        "total": 27.5691
+        "agriculture": 3.4702,
+        "manufacturing": 33.2699,
+        "total": 26.2374
       }
     },
     "code": "404"
@@ -1552,9 +1532,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 13.0793,
-        "manufacturing": 22.4419,
-        "total": 21.3067
+        "agriculture": 9.3855,
+        "manufacturing": 22.6089,
+        "total": 21.129
       }
     },
     "code": "417"
@@ -1572,9 +1552,9 @@
       },
       "now": {
         "fuels_mining": 19.0061,
-        "agriculture": 18.1603,
-        "manufacturing": 30.5186,
-        "total": 30.2081
+        "agriculture": 17.2778,
+        "manufacturing": 30.5157,
+        "total": 30.1907
       }
     },
     "code": "116"
@@ -1631,10 +1611,10 @@
         "total": 0.5883
       },
       "now": {
-        "fuels_mining": 10.1467,
-        "agriculture": 14.9971,
-        "manufacturing": 22.745,
-        "total": 21.6455
+        "fuels_mining": 10.1462,
+        "agriculture": 11.9365,
+        "manufacturing": 22.6832,
+        "total": 21.5323
       }
     },
     "code": "410"
@@ -1652,9 +1632,9 @@
       },
       "now": {
         "fuels_mining": 0.183,
-        "agriculture": 19.7702,
-        "manufacturing": 12.9628,
-        "total": 0.2566
+        "agriculture": 19.5158,
+        "manufacturing": 12.9602,
+        "total": 0.2564
       }
     },
     "code": "414"
@@ -1672,9 +1652,9 @@
       },
       "now": {
         "fuels_mining": 4.286,
-        "agriculture": 21.1991,
-        "manufacturing": 39.0755,
-        "total": 37.9397
+        "agriculture": 16.8765,
+        "manufacturing": 39.0749,
+        "total": 37.9301
       }
     },
     "code": "418"
@@ -1692,9 +1672,9 @@
       },
       "now": {
         "fuels_mining": 7.8013,
-        "agriculture": 14.886,
-        "manufacturing": 15.0056,
-        "total": 14.7229
+        "agriculture": 13.232,
+        "manufacturing": 11.6318,
+        "total": 11.8739
       }
     },
     "code": "422"
@@ -1712,9 +1692,9 @@
       },
       "now": {
         "fuels_mining": 9.1856,
-        "agriculture": 0.1528,
+        "agriculture": 0.1522,
         "manufacturing": 16.1132,
-        "total": 1.2813
+        "total": 1.2808
       }
     },
     "code": "430"
@@ -1752,9 +1732,9 @@
       },
       "now": {
         "fuels_mining": 4.3072,
-        "agriculture": 10.2866,
+        "agriculture": 9.6207,
         "manufacturing": 16.6282,
-        "total": 6.6353
+        "total": 6.3956
       }
     },
     "code": "662"
@@ -1772,9 +1752,9 @@
       },
       "now": {
         "fuels_mining": 20.3926,
-        "agriculture": 20.772,
-        "manufacturing": 34.057,
-        "total": 31.5986
+        "agriculture": 7.8922,
+        "manufacturing": 33.9974,
+        "total": 30.3145
       }
     },
     "code": "144"
@@ -1812,9 +1792,9 @@
       },
       "now": {
         "fuels_mining": 10,
-        "agriculture": 10.3996,
-        "manufacturing": 20.6839,
-        "total": 14.7865
+        "agriculture": 4.9074,
+        "manufacturing": 20.6758,
+        "total": 14.6758
       }
     },
     "code": "446"
@@ -1832,9 +1812,9 @@
       },
       "now": {
         "fuels_mining": 0.8327,
-        "agriculture": 10.0196,
-        "manufacturing": 13.4649,
-        "total": 12.1635
+        "agriculture": 9.0663,
+        "manufacturing": 12.0568,
+        "total": 10.9149
       }
     },
     "code": "504"
@@ -1852,9 +1832,9 @@
       },
       "now": {
         "fuels_mining": 25,
-        "agriculture": 28.8813,
-        "manufacturing": 31.4923,
-        "total": 29.8782
+        "agriculture": 28.5902,
+        "manufacturing": 31.3635,
+        "total": 29.6544
       }
     },
     "code": "498"
@@ -1872,9 +1852,9 @@
       },
       "now": {
         "fuels_mining": 4.1637,
-        "agriculture": 15.4227,
-        "manufacturing": 36.308,
-        "total": 23.1787
+        "agriculture": 1.8663,
+        "manufacturing": 36.0872,
+        "total": 20.8022
       }
     },
     "code": "450"
@@ -1913,8 +1893,8 @@
       "now": {
         "fuels_mining": 4.2741,
         "agriculture": 3.92,
-        "manufacturing": 23.0287,
-        "total": 19.7522
+        "manufacturing": 16.2597,
+        "total": 14.1249
       }
     },
     "code": "484"
@@ -1952,9 +1932,9 @@
       },
       "now": {
         "fuels_mining": 15,
-        "agriculture": 17.368,
-        "manufacturing": 37.656,
-        "total": 33.3779
+        "agriculture": 16.5215,
+        "manufacturing": 18.7513,
+        "total": 18.2624
       }
     },
     "code": "807"
@@ -1972,9 +1952,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 10.0862,
-        "manufacturing": 17.7511,
-        "total": 11.8696
+        "agriculture": 8.5554,
+        "manufacturing": 18.1139,
+        "total": 11.1372
       }
     },
     "code": "466"
@@ -1992,9 +1972,9 @@
       },
       "now": {
         "fuels_mining": 33.6046,
-        "agriculture": 40.0637,
-        "manufacturing": 50.6607,
-        "total": 49.4837
+        "agriculture": 38.9361,
+        "manufacturing": 50.6604,
+        "total": 49.3993
       }
     },
     "code": "104"
@@ -2032,9 +2012,9 @@
       },
       "now": {
         "fuels_mining": 0.5275,
-        "agriculture": 10.242,
-        "manufacturing": 23.9918,
-        "total": 13.0281
+        "agriculture": 2.7577,
+        "manufacturing": 23.8849,
+        "total": 8.8305
       }
     },
     "code": "496"
@@ -2052,9 +2032,9 @@
       },
       "now": {
         "fuels_mining": 10.4492,
-        "agriculture": 25.0518,
-        "manufacturing": 26.2248,
-        "total": 12.8348
+        "agriculture": 24.6129,
+        "manufacturing": 26.3217,
+        "total": 12.7714
       }
     },
     "code": "508"
@@ -2092,9 +2072,9 @@
       },
       "now": {
         "fuels_mining": 14.9402,
-        "agriculture": 15.4993,
-        "manufacturing": 27.01,
-        "total": 18.6703
+        "agriculture": 14.7833,
+        "manufacturing": 26.9938,
+        "total": 18.2355
       }
     },
     "code": "480"
@@ -2112,9 +2092,9 @@
       },
       "now": {
         "fuels_mining": 15,
-        "agriculture": 17.5953,
-        "manufacturing": 18.0941,
-        "total": 17.5942
+        "agriculture": 11.7861,
+        "manufacturing": 17.9838,
+        "total": 11.8396
       }
     },
     "code": "454"
@@ -2132,9 +2112,9 @@
       },
       "now": {
         "fuels_mining": 35.9958,
-        "agriculture": 19.3429,
-        "manufacturing": 12.8932,
-        "total": 12.9391
+        "agriculture": 13.2329,
+        "manufacturing": 12.8825,
+        "total": 12.7685
       }
     },
     "code": "458"
@@ -2152,9 +2132,9 @@
       },
       "now": {
         "fuels_mining": 10.0424,
-        "agriculture": 15.0006,
-        "manufacturing": 18.2736,
-        "total": 10.7051
+        "agriculture": 14.7297,
+        "manufacturing": 18.2774,
+        "total": 10.6984
       }
     },
     "code": "516"
@@ -2192,9 +2172,9 @@
       },
       "now": {
         "fuels_mining": 0.394,
-        "agriculture": 14.3013,
-        "manufacturing": 15.5194,
-        "total": 1.2141
+        "agriculture": 10.3718,
+        "manufacturing": 4.0594,
+        "total": 0.7468
       }
     },
     "code": "566"
@@ -2212,9 +2192,9 @@
       },
       "now": {
         "fuels_mining": 0.0266,
-        "agriculture": 18.8491,
-        "manufacturing": 19.8602,
-        "total": 17.1026
+        "agriculture": 10.733,
+        "manufacturing": 19.8011,
+        "total": 14.7276
       }
     },
     "code": "558"
@@ -2251,10 +2231,10 @@
         "total": 0.9628
       },
       "now": {
-        "fuels_mining": 1.7319,
-        "agriculture": 15.226,
-        "manufacturing": 16.9499,
-        "total": 10.6561
+        "fuels_mining": 1.7102,
+        "agriculture": 15.0048,
+        "manufacturing": 16.3881,
+        "total": 10.381
       }
     },
     "code": "578"
@@ -2272,9 +2252,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 10.5069,
-        "manufacturing": 12.3793,
-        "total": 11.9405
+        "agriculture": 10.0604,
+        "manufacturing": 12.2525,
+        "total": 11.7466
       }
     },
     "code": "524"
@@ -2312,9 +2292,9 @@
       },
       "now": {
         "fuels_mining": 13.0816,
-        "agriculture": 16.0691,
-        "manufacturing": 21.6797,
-        "total": 16.9832
+        "agriculture": 10.6729,
+        "manufacturing": 21.662,
+        "total": 13.3357
       }
     },
     "code": "554"
@@ -2331,10 +2311,10 @@
         "total": 4.8517
       },
       "now": {
-        "fuels_mining": 39.7146,
-        "agriculture": 10.0346,
-        "manufacturing": 18.2405,
-        "total": 21.3358
+        "fuels_mining": 39.7037,
+        "agriculture": 6.4093,
+        "manufacturing": 17.2414,
+        "total": 20.6215
       }
     },
     "code": "512"
@@ -2352,9 +2332,9 @@
       },
       "now": {
         "fuels_mining": 10.6814,
-        "agriculture": 20.3703,
-        "manufacturing": 30.0661,
-        "total": 29.0655
+        "agriculture": 16.7255,
+        "manufacturing": 30.0653,
+        "total": 28.8612
       }
     },
     "code": "586"
@@ -2372,9 +2352,9 @@
       },
       "now": {
         "fuels_mining": 5.9746,
-        "agriculture": 11.2053,
-        "manufacturing": 8.2508,
-        "total": 6.488
+        "agriculture": 9.4452,
+        "manufacturing": 8.2521,
+        "total": 5.901
       }
     },
     "code": "591"
@@ -2391,10 +2371,10 @@
         "total": 0.1307
       },
       "now": {
-        "fuels_mining": 5.6913,
-        "agriculture": 10.1303,
-        "manufacturing": 11.2944,
-        "total": 8.8873
+        "fuels_mining": 5.6821,
+        "agriculture": 7.8111,
+        "manufacturing": 11.7895,
+        "total": 7.7417
       }
     },
     "code": "604"
@@ -2412,9 +2392,9 @@
       },
       "now": {
         "fuels_mining": 12.5235,
-        "agriculture": 19.8109,
-        "manufacturing": 18.3211,
-        "total": 17.9661
+        "agriculture": 6.4321,
+        "manufacturing": 18.321,
+        "total": 16.5957
       }
     },
     "code": "608"
@@ -2452,9 +2432,9 @@
       },
       "now": {
         "fuels_mining": 0,
-        "agriculture": 14.9987,
+        "agriculture": 0.4447,
         "manufacturing": 14.6617,
-        "total": 14.649
+        "total": 1.585
       }
     },
     "code": "598"
@@ -2472,9 +2452,9 @@
       },
       "now": {
         "fuels_mining": 0.7729,
-        "agriculture": 18.0297,
-        "manufacturing": 17.8089,
-        "total": 15.9484
+        "agriculture": 14.3874,
+        "manufacturing": 16.6609,
+        "total": 13.1773
       }
     },
     "code": "600"
@@ -2492,9 +2472,9 @@
       },
       "now": {
         "fuels_mining": 50,
-        "agriculture": 10,
+        "agriculture": 9.2597,
         "manufacturing": 10.5334,
-        "total": 11.1111
+        "total": 10.4866
       }
     },
     "code": "275"
@@ -2512,9 +2492,9 @@
       },
       "now": {
         "fuels_mining": 8.6296,
-        "agriculture": 10,
-        "manufacturing": 10.684,
-        "total": 7.4292
+        "agriculture": 0,
+        "manufacturing": 1.8605,
+        "total": 5.4968
       }
     },
     "code": "634"
@@ -2532,9 +2512,9 @@
       },
       "now": {
         "fuels_mining": 0,
-        "agriculture": 10.0903,
-        "manufacturing": 17.003,
-        "total": 9.2647
+        "agriculture": 1.9357,
+        "manufacturing": 16.2202,
+        "total": 2.8601
       }
     },
     "code": "646"
@@ -2552,9 +2532,9 @@
       },
       "now": {
         "fuels_mining": 0.666,
-        "agriculture": 10.8665,
-        "manufacturing": 11.4528,
-        "total": 2.2718
+        "agriculture": 10.2881,
+        "manufacturing": 7.3437,
+        "total": 1.6702
       }
     },
     "code": "682"
@@ -2592,9 +2572,9 @@
       },
       "now": {
         "fuels_mining": 1.05,
-        "agriculture": 23.4309,
-        "manufacturing": 10.9129,
-        "total": 9.5624
+        "agriculture": 23.3503,
+        "manufacturing": 8.6752,
+        "total": 8.8297
       }
     },
     "code": "686"
@@ -2612,9 +2592,9 @@
       },
       "now": {
         "fuels_mining": 0.7079,
-        "agriculture": 16.6867,
-        "manufacturing": 4.4488,
-        "total": 4.6165
+        "agriculture": 7.2832,
+        "manufacturing": 4.4472,
+        "total": 3.9894
       }
     },
     "code": "702"
@@ -2632,9 +2612,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 8.1077,
+        "agriculture": 7.5744,
         "manufacturing": 18.6848,
-        "total": 7.919
+        "total": 7.5378
       }
     },
     "code": "090"
@@ -2652,9 +2632,9 @@
       },
       "now": {
         "fuels_mining": 3.0248,
-        "agriculture": 10.5036,
+        "agriculture": 5.3189,
         "manufacturing": 24.8094,
-        "total": 9.2484
+        "total": 8.2979
       }
     },
     "code": "694"
@@ -2672,9 +2652,9 @@
       },
       "now": {
         "fuels_mining": 19.7856,
-        "agriculture": 18.0662,
-        "manufacturing": 11.1782,
-        "total": 11.689
+        "agriculture": 14.6599,
+        "manufacturing": 11.176,
+        "total": 11.0586
       }
     },
     "code": "222"
@@ -2693,8 +2673,8 @@
       "now": {
         "fuels_mining": 10,
         "agriculture": 10.6264,
-        "manufacturing": 23.7578,
-        "total": 19.7271
+        "manufacturing": 23.6328,
+        "total": 19.6394
       }
     },
     "code": "706"
@@ -2732,9 +2712,9 @@
       },
       "now": {
         "fuels_mining": 26.1193,
-        "agriculture": 37.8328,
-        "manufacturing": 35.9192,
-        "total": 35.4372
+        "agriculture": 35.3133,
+        "manufacturing": 35.9159,
+        "total": 35.112
       }
     },
     "code": "688"
@@ -2792,9 +2772,9 @@
       },
       "now": {
         "fuels_mining": 8.6018,
-        "agriculture": 9.5276,
-        "manufacturing": 27.5873,
-        "total": 10.1797
+        "agriculture": 9.527,
+        "manufacturing": 27.6883,
+        "total": 10.1878
       }
     },
     "code": "740"
@@ -2812,9 +2792,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 11.6155,
-        "manufacturing": 24.7171,
-        "total": 15.9212
+        "agriculture": 9.2188,
+        "manufacturing": 24.6141,
+        "total": 14.286
       }
     },
     "code": "748"
@@ -2872,9 +2852,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 43.7052,
+        "agriculture": 19.5099,
         "manufacturing": 42.2171,
-        "total": 42.139
+        "total": 30.8442
       }
     },
     "code": "760"
@@ -2912,9 +2892,9 @@
       },
       "now": {
         "fuels_mining": 4.1,
-        "agriculture": 11.1186,
-        "manufacturing": 13.6984,
-        "total": 11.2863
+        "agriculture": 10.9743,
+        "manufacturing": 13.6401,
+        "total": 11.1504
       }
     },
     "code": "768"
@@ -2931,10 +2911,10 @@
         "total": 2.4448
       },
       "now": {
-        "fuels_mining": 35.2511,
-        "agriculture": 19.6206,
-        "manufacturing": 22.0826,
-        "total": 21.9783
+        "fuels_mining": 35.2397,
+        "agriculture": 16.1214,
+        "manufacturing": 22.0548,
+        "total": 21.6462
       }
     },
     "code": "764"
@@ -2952,9 +2932,9 @@
       },
       "now": {
         "fuels_mining": 0.7878,
-        "agriculture": 10.7678,
+        "agriculture": 10.6729,
         "manufacturing": 13.4169,
-        "total": 2.1408
+        "total": 2.1363
       }
     },
     "code": "762"
@@ -2973,8 +2953,8 @@
       "now": {
         "fuels_mining": null,
         "agriculture": null,
-        "manufacturing": 10.4469,
-        "total": 8.3425
+        "manufacturing": 2.1353,
+        "total": 1.7052
       }
     },
     "code": "795"
@@ -2992,9 +2972,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 10,
+        "agriculture": 0.3742,
         "manufacturing": 12.9457,
-        "total": 10.5003
+        "total": 2.7593
       }
     },
     "code": "626"
@@ -3012,9 +2992,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 9.6268,
+        "agriculture": 8.7042,
         "manufacturing": 18.4367,
-        "total": 13.8344
+        "total": 13.432
       }
     },
     "code": "776"
@@ -3032,9 +3012,9 @@
       },
       "now": {
         "fuels_mining": 0.0287,
-        "agriculture": 17.5743,
-        "manufacturing": 15.0301,
-        "total": 6.8654
+        "agriculture": 9.7273,
+        "manufacturing": 13.0213,
+        "total": 5.8475
       }
     },
     "code": "780"
@@ -3052,9 +3032,9 @@
       },
       "now": {
         "fuels_mining": 18.0482,
-        "agriculture": 25.723,
-        "manufacturing": 31.9191,
-        "total": 28.7791
+        "agriculture": 25.6537,
+        "manufacturing": 28.9542,
+        "total": 27.1971
       }
     },
     "code": "788"
@@ -3071,10 +3051,10 @@
         "total": 4.8344
       },
       "now": {
-        "fuels_mining": 8.3443,
-        "agriculture": 17.673,
-        "manufacturing": 27.0695,
-        "total": 23.4786
+        "fuels_mining": 8.3412,
+        "agriculture": 16.2417,
+        "manufacturing": 26.6279,
+        "total": 22.9625
       }
     },
     "code": "792"
@@ -3111,10 +3091,10 @@
         "total": 2.1617
       },
       "now": {
-        "fuels_mining": 16.6932,
-        "agriculture": 22.4642,
-        "manufacturing": 16.6784,
-        "total": 16.5072
+        "fuels_mining": 16.6847,
+        "agriculture": 16.705,
+        "manufacturing": 16.679,
+        "total": 16.4537
       }
     },
     "code": "158"
@@ -3132,9 +3112,9 @@
       },
       "now": {
         "fuels_mining": 10.0072,
-        "agriculture": 10.7823,
-        "manufacturing": 32.9886,
-        "total": 20.0545
+        "agriculture": 4.8199,
+        "manufacturing": 32.9871,
+        "total": 18.1583
       }
     },
     "code": "834"
@@ -3152,9 +3132,9 @@
       },
       "now": {
         "fuels_mining": 14.8576,
-        "agriculture": 15.2174,
+        "agriculture": 1.7605,
         "manufacturing": 15.3197,
-        "total": 14.9526
+        "total": 2.8756
       }
     },
     "code": "800"
@@ -3171,10 +3151,10 @@
         "total": 1.2395
       },
       "now": {
-        "fuels_mining": 0.8236,
-        "agriculture": 12.517,
-        "manufacturing": 20.6456,
-        "total": 18.4444
+        "fuels_mining": 0.8112,
+        "agriculture": 12.1246,
+        "manufacturing": 20.6388,
+        "total": 18.3674
       }
     },
     "code": "804"
@@ -3192,9 +3172,9 @@
       },
       "now": {
         "fuels_mining": 5.4366,
-        "agriculture": 17.7379,
+        "agriculture": 11.7299,
         "manufacturing": 13.8863,
-        "total": 16.8228
+        "total": 11.6337
       }
     },
     "code": "858"
@@ -3212,9 +3192,9 @@
       },
       "now": {
         "fuels_mining": 29.4523,
-        "agriculture": 13.0265,
+        "agriculture": 11.0095,
         "manufacturing": 14.4536,
-        "total": 18.0928
+        "total": 17.6486
       }
     },
     "code": "860"
@@ -3232,9 +3212,9 @@
       },
       "now": {
         "fuels_mining": 8.7612,
-        "agriculture": 10,
+        "agriculture": 9.9209,
         "manufacturing": 10.8023,
-        "total": 7.0351
+        "total": 7.0145
       }
     },
     "code": "670"
@@ -3252,9 +3232,9 @@
       },
       "now": {
         "fuels_mining": 0.0861,
-        "agriculture": 15.8207,
-        "manufacturing": 25.4113,
-        "total": 0.9348
+        "agriculture": 13.8914,
+        "manufacturing": 25.4072,
+        "total": 0.8777
       }
     },
     "code": "862"
@@ -3271,10 +3251,10 @@
         "total": 4.3726
       },
       "now": {
-        "fuels_mining": 43.3929,
-        "agriculture": 20.7787,
-        "manufacturing": 23.7871,
-        "total": 23.4729
+        "fuels_mining": 43.3911,
+        "agriculture": 12.5134,
+        "manufacturing": 23.7852,
+        "total": 23.1595
       }
     },
     "code": "704"
@@ -3292,9 +3272,9 @@
       },
       "now": {
         "fuels_mining": null,
-        "agriculture": 15.0087,
+        "agriculture": 14.9087,
         "manufacturing": 17.2838,
-        "total": 15.0599
+        "total": 14.9621
       }
     },
     "code": "548"
@@ -3332,9 +3312,9 @@
       },
       "now": {
         "fuels_mining": 10,
-        "agriculture": 10.7024,
+        "agriculture": 1.5162,
         "manufacturing": 19.5214,
-        "total": 9.273
+        "total": 2.5031
       }
     },
     "code": "882"
@@ -3352,9 +3332,9 @@
       },
       "now": {
         "fuels_mining": 10,
-        "agriculture": 11.956,
+        "agriculture": 9.8279,
         "manufacturing": 24.4512,
-        "total": 23.5452
+        "total": 23.4025
       }
     },
     "code": null
@@ -3372,9 +3352,9 @@
       },
       "now": {
         "fuels_mining": 10,
-        "agriculture": 13.2271,
-        "manufacturing": 18.4451,
-        "total": 14.3196
+        "agriculture": 6.6425,
+        "manufacturing": 18.43,
+        "total": 9.2517
       }
     },
     "code": "887"
@@ -3391,10 +3371,10 @@
         "total": 0.7096
       },
       "now": {
-        "fuels_mining": 9.3857,
-        "agriculture": 33.5646,
-        "manufacturing": 18.2234,
-        "total": 14.7411
+        "fuels_mining": 9.3842,
+        "agriculture": 27.5417,
+        "manufacturing": 18.1024,
+        "total": 14.4085
       }
     },
     "code": "710"
@@ -3412,9 +3392,9 @@
       },
       "now": {
         "fuels_mining": 12.5601,
-        "agriculture": 23.5966,
-        "manufacturing": 14.8281,
-        "total": 13.3283
+        "agriculture": 12.089,
+        "manufacturing": 14.8803,
+        "total": 12.4937
       }
     },
     "code": "894"
@@ -3432,9 +3412,9 @@
       },
       "now": {
         "fuels_mining": 15.1242,
-        "agriculture": 19.1739,
-        "manufacturing": 15.7596,
-        "total": 18.7659
+        "agriculture": 17.9336,
+        "manufacturing": 15.6696,
+        "total": 17.6387
       }
     },
     "code": "716"
