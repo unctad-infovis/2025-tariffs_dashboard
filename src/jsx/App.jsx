@@ -31,7 +31,7 @@ function App() {
     const dataPath = `${(window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2025-tariffs_dashboard/' : (window.location.href.includes('localhost:80')) ? './' : 'https://unctad-infovis.github.io/2025-tariffs_dashboard/'}assets/data/`;
 
     const topology_file = 'worldmap-economies-54030.topo.json';
-    const data_file = 'data.json?v=3';
+    const data_file = 'data.json?v=4';
     let values;
     try {
       values = Promise.all([
@@ -314,7 +314,7 @@ function App() {
             <a href="https://unctad.org/page/map-disclaimer" target="_blank" rel="noreferrer">Map disclaimer</a>
             .
             <br />
-            <a href="https://storage.unctad.org/2025-tariffs_dashboard/assets/data/data.csv" target="_blank" rel="noreferrer">Get the data</a>
+            <a href="https://storage.unctad.org/2025-tariffs_dashboard/assets/data/data.csv?december2025" target="_blank" rel="noreferrer">Get the data</a>
           </div>
         </div>
       </div>
