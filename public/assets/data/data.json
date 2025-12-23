@@ -511,10 +511,10 @@
         "total": 0.006
       },
       "now": {
-        "fuels_mining": 4.9577,
-        "agriculture": 5.1653,
-        "manufacturing": 18.7655,
-        "total": 11.0905
+        "fuels_mining": 4.9058,
+        "agriculture": 4.2307,
+        "manufacturing": 15.713,
+        "total": 9.5568
       }
     },
     "code": "124"
@@ -531,10 +531,10 @@
         "total": 0.6052
       },
       "now": {
-        "fuels_mining": 5.9601,
-        "agriculture": 14.2883,
-        "manufacturing": 12.9115,
-        "total": 11.9561
+        "fuels_mining": 0.8884,
+        "agriculture": 5.134,
+        "manufacturing": 5.3085,
+        "total": 4.8257
       }
     },
     "code": "756"
@@ -953,8 +953,8 @@
       "now": {
         "fuels_mining": 8.7298,
         "agriculture": 13.7775,
-        "manufacturing": 11.5143,
-        "total": 10.9267
+        "manufacturing": 11.0616,
+        "total": 10.5418
       }
     },
     "code": "918"
@@ -1053,8 +1053,8 @@
       "now": {
         "fuels_mining": 2.8411,
         "agriculture": 11.009,
-        "manufacturing": 8.4563,
-        "total": 7.5052
+        "manufacturing": 8.0118,
+        "total": 7.1487
       }
     },
     "code": "826"
@@ -1473,8 +1473,8 @@
       "now": {
         "fuels_mining": 14.0924,
         "agriculture": 13.1928,
-        "manufacturing": 17.8197,
-        "total": 17.4117
+        "manufacturing": 16.7738,
+        "total": 16.41
       }
     },
     "code": "392"
@@ -1611,10 +1611,10 @@
         "total": 0.5883
       },
       "now": {
-        "fuels_mining": 10.1462,
-        "agriculture": 11.9365,
-        "manufacturing": 22.6832,
-        "total": 21.5323
+        "fuels_mining": 10.0939,
+        "agriculture": 11.9343,
+        "manufacturing": 15.2259,
+        "total": 14.7101
       }
     },
     "code": "410"
@@ -1821,7 +1821,7 @@
   },
   {
     "ISO3": "MDA",
-    "Country": "Moldova, Republic of",
+    "Country": "Republic of Moldova",
     "dev_status": "Developed",
     "data": {
       "pre": {
@@ -1891,10 +1891,10 @@
         "total": 0.07
       },
       "now": {
-        "fuels_mining": 4.2741,
-        "agriculture": 3.92,
-        "manufacturing": 16.2597,
-        "total": 14.1249
+        "fuels_mining": 3.9696,
+        "agriculture": 3.2025,
+        "manufacturing": 15.2441,
+        "total": 13.1936
       }
     },
     "code": "484"
@@ -3101,7 +3101,7 @@
   },
   {
     "ISO3": "TZA",
-    "Country": "Tanzania, United Republic of",
+    "Country": "United Republic of Tanzania",
     "dev_status": "Least developed",
     "data": {
       "pre": {
@@ -3337,7 +3337,7 @@
         "total": 23.4025
       }
     },
-    "code": null
+    "code": "412"
   },
   {
     "ISO3": "YEM",
