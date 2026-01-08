@@ -565,16 +565,16 @@
     "dev_status": "Developing",
     "data": {
       "pre": {
-        "fuels_mining": 23.4129,
+        "fuels_mining": 22.5205,
         "agriculture": 17.8306,
         "manufacturing": 12.3029,
-        "total": 12.2907
+        "total": 12.2852
       },
       "now": {
         "fuels_mining": 52.0188,
         "agriculture": 36.3144,
-        "manufacturing": 37.7135,
-        "total": 37.2448
+        "manufacturing": 37.832,
+        "total": 37.3589
       }
     },
     "code": "156"
