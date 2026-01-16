@@ -31,7 +31,7 @@ function App() {
     const dataPath = `${(window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2025-tariffs_dashboard/' : (window.location.href.includes('localhost:80')) ? './' : 'https://unctad-infovis.github.io/2025-tariffs_dashboard/'}assets/data/`;
 
     const topology_file = 'worldmap-economies-54030.topo.json';
-    const data_file = 'data.json?v=january2026';
+    const data_file = 'data.json?v=january2026_2';
     let values;
     try {
       values = Promise.all([
@@ -309,12 +309,12 @@ function App() {
             <br />
             <em>Note:</em>
             {' '}
-            Trade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Agriculture includes agricultural raw materials and food. Fuels and mining include fuels, ores, metals, precious stones and non-monetary gold. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Classification of goods by sectors according to UNCTAD Handbook of Statistics 2024; more goods are contained in total results than in the three broad sectoral groups. Data updated as of 7 January 2026.
+            Trade weights are for the year 2024. Tariffs are calculated at the HS 8-digit level. Agriculture includes agricultural raw materials and food. Fuels and mining include fuels, ores, metals, precious stones and non-monetary gold. The analysis excludes Section 232 steel and aluminum tariffs on derivatives under HS chapters 1-70, where the additional duty applies only to the metal content which is expected to be low. Tariffs for Belarus, Cuba, North Korea, and the Russian Federation are not presented, as separate schedules apply. Special industrial zones were not considered in tariff calculations. Classification of goods by sectors according to UNCTAD Handbook of Statistics 2024; more goods are contained in total results than in the three broad sectoral groups. Data updated as of 16 January 2026.
             {' '}
             <a href="https://unctad.org/page/map-disclaimer" target="_blank" rel="noreferrer">Map disclaimer</a>
             .
             <br />
-            <a href="https://storage.unctad.org/2025-tariffs_dashboard/assets/data/data.csv?january2026" target="_blank" rel="noreferrer">Get the data</a>
+            <a href="https://storage.unctad.org/2025-tariffs_dashboard/assets/data/data.csv?january2026_2" target="_blank" rel="noreferrer">Get the data</a>
           </div>
         </div>
       </div>
