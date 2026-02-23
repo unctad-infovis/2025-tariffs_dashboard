@@ -80,7 +80,7 @@ function App() {
   };
 
   const customStyles = {
-  // outer control (border, background)
+    // outer control (border, background)
     control: (provided, state) => ({
       ...provided,
       boxShadow: state.isFocused ? provided.boxShadow : null,
