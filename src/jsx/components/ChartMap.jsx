@@ -184,7 +184,7 @@ function ChartMap({
       },
       chart: {
         backgroundColor: 'transparent',
-        height: Math.max((document.getElementById('map_container').offsetWidth * 7) / 16, 450),
+        height: Math.max((document.getElementById('map_container').offsetWidth * 7) / 16 - 40, 450),
         type: 'map'
       },
       credits: {
