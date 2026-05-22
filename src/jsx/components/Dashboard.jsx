@@ -10,7 +10,6 @@ import { Tooltip } from 'react-tooltip';
 import LoadFile from './../helpers/LoadFile.js';
 import ChartMap from './dashboard/ChartMap.jsx';
 import ChartSwarm from './dashboard/ChartSwarm.jsx';
-// Helpers.
 
 import './Dashboard.css';
 

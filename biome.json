@@ -1,8 +1,8 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
   "vcs": {
-    "enabled": true,
     "clientKind": "git",
+    "enabled": true,
     "useIgnoreFile": false
   },
   "files": {
@@ -29,11 +29,11 @@
   },
   "javascript": {
     "formatter": {
-      "quoteStyle": "single",
+      "arrowParentheses": "asNeeded",
       "jsxQuoteStyle": "double",
+      "quoteStyle": "single",
       "semicolons": "always",
-      "trailingCommas": "none",
-      "arrowParentheses": "asNeeded"
+      "trailingCommas": "none"
     }
   },
   "css": {

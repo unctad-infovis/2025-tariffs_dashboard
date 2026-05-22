@@ -10,16 +10,33 @@ Contact Teemo Tebest.
 
 This is a Vite + React project.
 
-* `npm install`
-* `npm start`
+* `npm run install`
+* `npm run start`
 
 Project should start at: http://localhost:8080
 
 For developing please refer to `package.json`
 
+## How to update data
+
+1. Replace the data file at `./public/assets/data/data.json`
+2. Check in browser that everything works with `npm run start`
+3. Update the meta data at `./src/meta.json`
+4. Create a new production build `npm run build` 
+5. Syncronize project to Azure Storage `npm run sync-prod` 
+6. Push changes to remote Git.
+
 ## Packages
 
 The following packages are used in this project by default.
+
+### Project specific
+
+* **d3** - used to create the swarm,
+* **highcharts** - used to create the map,
+* **react-select** - used to create the select menu
+* **react-tooltip** - used to create the tooltips
+* **uuid** - used to create unique keys
 
 ### Build & Dev Server
 
