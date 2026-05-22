@@ -32,11 +32,12 @@ The following packages are used in this project by default.
 
 ### Project specific
 
-* **d3** - used to create the swarm,
-* **highcharts** - used to create the map,
-* **react-select** - used to create the select menu
-* **react-tooltip** - used to create the tooltips
-* **uuid** - used to create unique keys
+* **d3** - is used to create the swarm
+* **highcharts** - is used to create the map
+* **react-is-visible** - is used to check if the visualisation is in viewport
+* **react-select** - is used to create the select menu
+* **react-tooltip** - is used to create the tooltips
+* **uuid** - is used to create unique keys
 
 ### Build & Dev Server
 
