@@ -1,7 +1,5 @@
 // Define a color mapping function based on value **and code**
 const getValue = (region, data, china_areas) => {
-  const match = data.find(row => row.code === region.code);
-
   // First check if this code is special
   if (region.code === 'C00002') {
     // AksaiChin
@@ -22,6 +20,7 @@ const getValue = (region, data, china_areas) => {
     const chinaData = data.find(row => row.code === '156');
     return chinaData?.value || null;
   }
+  const match = data.find(row => row.code === region.code);
   return match?.value || null;
 };
 

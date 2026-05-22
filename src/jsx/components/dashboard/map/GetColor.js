@@ -1,9 +1,6 @@
 // Define a color mapping function based on value (special cases dealt with by getColor)
-function getColorFromValue(value, type) {
+function getColorFromValue(value) {
   // Return grey if value is null, NaN, or undefined
-  if (value === null || value === undefined || Number.isNaN(value) || !type) {
-    return '#ded9d5';
-  }
   return '#ded9d5';
 }
 
@@ -19,7 +16,7 @@ const getColor = (region, data, china_areas) => {
     return {
       pattern: {
         backgroundColor: getColorFromValue(kashmirValue),
-        color: getColorFromValue(chinaValue, chinaData),
+        color: getColorFromValue(chinaValue),
         height: 10 / 100000, // Height of the pattern
         path: {
           d: 'M 0 10 L 10 0 M -1 1 L 1 -1 M 9 11 L 11 9',
