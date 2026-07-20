@@ -18,6 +18,7 @@ import Article from '../Article.mdx';
 import Dashboard from './components/Dashboard.jsx';
 
 import '@unctad-infovis/general-tools/styles/styles.css';
+import '@unctad-infovis/map-tools/styles.css';
 
 import meta from './../meta.json';
 
