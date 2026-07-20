@@ -8,11 +8,10 @@ import 'highcharts/modules/export-data';
 import 'highcharts/modules/pattern-fill';
 
 // Load map helpers.
-import createMaplineSeries from './map/CreateMaplineSeries.js';
-// import getColor from './map/GetColor.js';
-import getValue from './map/GetValue.js';
-import processTopoObject from './map/ProcessTopoObject.js';
-import processTopoObjectPolygons from './map/ProcessTopoObjectPolygons.js';
+import createMaplineSeries from '@unctad-infovis/map-tools/CreateMaplineSeries.js';
+import getValue from '@unctad-infovis/map-tools/GetValue.js';
+import processTopoObject from '@unctad-infovis/map-tools/ProcessTopoObject.js';
+import processTopoObjectPolygons from '@unctad-infovis/map-tools/ProcessTopoObjectPolygons.js';
 
 // import getColorAxis from ' ../helpers/map/GetColorAxis.js';
 

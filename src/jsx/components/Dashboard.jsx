@@ -1,21 +1,18 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import Select from '@unctad-infovis/general-tools/components/Select.jsx';
+import Tooltip from '@unctad-infovis/general-tools/components/Tooltip.jsx';
+import LoadFile from '@unctad-infovis/general-tools/helpers/LoadFile.js';
+import useIsVisible from '@unctad-infovis/general-tools/helpers/UseIsVisible.js';
 
-// https://www.npmjs.com/package/react-is-visible
-import { useIsVisible } from 'react-is-visible';
-
-import Select from 'react-select';
-import { Tooltip } from 'react-tooltip';
+import { useCallback, useEffect, useState } from 'react';
 
 // Load helpers.
-import LoadFile from './../helpers/LoadFile.js';
 import ChartMap from './dashboard/ChartMap.jsx';
 import ChartSwarm from './dashboard/ChartSwarm.jsx';
 
 import './Dashboard.css';
 
 function App({ meta }) {
-  const appRef = useRef(null);
-  const isVisibleApp = useIsVisible(appRef);
+  const [setAppNode, isVisibleApp, appNode] = useIsVisible(0.1);
 
   const [data, setData] = useState(false);
 
@@ -46,12 +43,12 @@ function App({ meta }) {
   }, [fetchExternalData]);
 
   const checkWidth = useCallback(() => {
-    if (appRef.current.offsetWidth < 600) {
+    if (appNode && appNode.offsetWidth < 600) {
       setTimeout(() => {
         setSwarmState('collapsed');
       }, 1500);
     }
-  }, []);
+  }, [appNode]);
 
   useEffect(() => {
     if (isVisibleApp === true) {
@@ -60,62 +57,24 @@ function App({ meta }) {
   }, [checkWidth, isVisibleApp]);
 
   const changeType = element => {
-    for (const el of appRef.current.querySelectorAll('.selection_container.type_selection button')) el.classList.remove('active');
+    for (const el of appNode.querySelectorAll('.selection_container.type_selection button')) el.classList.remove('active');
     element.classList.add('active');
     setType(element.value);
   };
 
   const changeCategory = element => {
-    for (const el of appRef.current.querySelectorAll('.selection_container.category_selection button')) el.classList.remove('active');
+    for (const el of appNode.querySelectorAll('.selection_container.category_selection button')) el.classList.remove('active');
     element.classList.add('active');
     setCategory(element.value);
   };
 
   const changeCountry = option => {
-    setCountry(option && (!Array.isArray(option) || option.length) ? option : null);
-    setHoverCountry(option && (!Array.isArray(option) || option.length) ? option : null);
+    setCountry(option ?? null);
+    setHoverCountry(option ?? null);
   };
 
-  const customStyles = {
-    // outer control (border, background)
-    control: (provided, state) => ({
-      ...provided,
-      boxShadow: state.isFocused ? provided.boxShadow : null,
-      height: 28,
-      minHeight: 28 // control height
-    }),
-    // area that contains value & input
-    valueContainer: provided => ({
-      ...provided,
-      height: 28,
-      padding: '0 8px'
-    }),
-    // input itself (text cursor area)
-    input: provided => ({
-      ...provided,
-      margin: 0,
-      padding: 0
-    }),
-    // the selected value text (single)
-    singleValue: provided => ({
-      ...provided,
-      marginTop: 17,
-      transform: 'translateY(-50%)'
-    }),
-    // indicators on the right (chevron, clear)
-    indicatorsContainer: provided => ({
-      ...provided,
-      height: 28
-    }),
-    // controls the dropdown option height/padding
-    option: provided => ({
-      ...provided,
-      minHeight: 38,
-      padding: '10px 12px'
-    })
-  };
   return (
-    <figure className="container_custom" ref={appRef}>
+    <figure className="container_custom app" ref={setAppNode}>
       <div className="title_container">
         <div className="text_container">
           <div className="main_title_container">
@@ -196,22 +155,16 @@ function App({ meta }) {
                 <div className="selector_container">
                   {data && (
                     <Select
-                      className="basic-single"
-                      classNamePrefix="select"
-                      defaultValue=""
-                      isClearable
-                      isDisabled={false}
-                      isLoading={false}
-                      isRtl={false}
-                      isSearchable
+                      className="country_select"
+                      clearable
                       name="country"
                       onChange={selectedOption => changeCountry(selectedOption)}
                       options={data.data
                         .slice()
                         .sort((a, b) => a.Country.localeCompare(b.Country))
                         .map(el => ({ value: el.Country, label: el.Country }))}
-                      placeholder="Select economy "
-                      styles={customStyles}
+                      placeholder="Select economy"
+                      searchable
                       value={country}
                     />
                   )}
@@ -230,17 +183,14 @@ function App({ meta }) {
               <p>
                 <strong>Mapping the size</strong>
                 <br />
-                Trade-weighted average{' '}
-                <i className="circle_info" aria-hidden="true" data-tooltip-id="my-tooltip-1" title="">
-                  i
-                </i>
+                Trade-weighted average <Tooltip className="circle_info" content="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024." />
               </p>
               {data !== false && <ChartMap category={category} country={country} hover_country={hoverCountry} swarm_collapsed={swarmState} setCountry={setCountry} setHoverCountry={setHoverCountry} type={type} values={data} />}
             </div>
             {data !== false && (
               <div className={`swarm_wrapper ${swarmState}`}>
                 <div className="swarm_controls_container">
-                  {swarmState !== 'full' && appRef.current.offsetWidth < 900 && (
+                  {swarmState !== 'full' && appNode?.offsetWidth < 900 && (
                     <button
                       type="button"
                       onClick={() => {
@@ -255,7 +205,7 @@ function App({ meta }) {
                       {swarmState === 'collapsed' ? '◀◀' : '▶▶'}
                     </button>
                   )}{' '}
-                  {appRef.current.offsetWidth > 900 && false && (
+                  {appNode?.offsetWidth > 900 && false && (
                     <button
                       type="button"
                       onClick={() => {
@@ -273,10 +223,7 @@ function App({ meta }) {
                 <p>
                   <strong>Mapping the difference</strong>
                   <br />
-                  Trade-weighted average{' '}
-                  <i className="circle_info" aria-hidden="true" data-tooltip-id="my-tooltip-1" title="">
-                    i
-                  </i>
+                  Trade-weighted average <Tooltip className="circle_info" content="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024." />
                 </p>
                 <ChartSwarm category={category} country={country} hover_country={hoverCountry} setCountry={setCountry} setHoverCountry={setHoverCountry} swarm_collapsed={swarmState} type={type} values={data} />
               </div>
@@ -299,7 +246,6 @@ function App({ meta }) {
           </div>
         </div>
       </div>
-      <Tooltip className="my_tooltip" id="my-tooltip-1" place="top" content="The trade-weighted average tariff rate applied to each economy is based on the composition of exports to the US in 2024." />
     </figure>
   );
 }
