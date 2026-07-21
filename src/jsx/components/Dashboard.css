@@ -72,6 +72,7 @@
                 font-weight: 600;
                 line-height: 18px;
                 margin: 0 0 10px;
+                padding: 0;
                 span {
                   background-color: #eb1f48;
                   border-radius: 50%;
@@ -115,30 +116,25 @@
                   &.all {
                     margin-right: 10px;
                   }
-
                   &.active {
                     background-color: #009edb;
                     color: #fff;
-
                     &:hover {
                       color: #fff;
                       opacity: 0.7;
                     }
                   }
-
                   .title {
                     font-size: 16px;
                     font-weight: 300;
                     line-height: 18px;
                     margin-bottom: 2px;
                   }
-
                   .subtitle {
                     font-size: 13px;
                     line-height: 16px;
                   }
                 }
-
                 .country_select {
                   --select-control-height: 28px;
                   --select-min-width: 290px;
@@ -149,7 +145,6 @@
             }
           }
         }
-
         .legend_container {
           align-items: center;
           display: flex;
@@ -157,7 +152,6 @@
           font-size: 15px;
           justify-content: center;
           margin: 0 0 10px;
-
           .legend_item {
             align-items: center;
             display: flex;
@@ -197,7 +191,6 @@
             }
           }
         }
-
         .visualization_container {
           margin-bottom: 20px;
           overflow: hidden;
@@ -209,7 +202,6 @@
             position: absolute;
             z-index: 3;
           }
-
           .circle_info {
             --tooltip-z-index: 2000;
             .un_tooltip_trigger {
@@ -228,6 +220,7 @@
             .un_tooltip_bubble {
               bottom: auto;
               top: calc(100% + 8px);
+              width: 220px;
               &::after {
                 border-bottom-color: #fff;
                 border-top-color: transparent;
@@ -236,18 +229,15 @@
               }
             }
           }
-
           .map_wrapper {
             height: 100%;
             padding-top: 10px;
-
             .map_container {
               height: calc(100% - 40px);
               padding-top: 20px;
               width: calc(100% - 400px);
             }
           }
-
           .swarm_wrapper {
             background-color: #f2f8fc;
             box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
@@ -263,16 +253,13 @@
               width 0.3s ease;
             width: calc(100% - 20px);
             z-index: 4;
-
             &.collapsed {
               transform: translateX(calc(100% - 40px));
             }
-
             &.full {
               max-width: calc(100% - 40px);
               width: 100%;
             }
-
             .swarm_controls_container {
               button {
                 background-color: #009edb;
@@ -288,7 +275,6 @@
                 opacity: 0.7;
               }
             }
-
             .swarm_tooltip {
               background-color: #fff;
               border: 1px solid rgba(0, 73, 135, 0.4);
@@ -304,11 +290,9 @@
               position: absolute;
               transition: opacity 0.2s;
               z-index: 6;
-
               strong {
                 font-weight: 600;
               }
-
               &::after {
                 border-color: #fff transparent transparent transparent;
                 border-style: solid;
@@ -321,13 +305,11 @@
                 transform: translateX(-50%);
               }
             }
-
             .swarm_container {
               display: inline-block;
               height: 100%;
               position: relative;
               width: 100%;
-
               .svg_container {
                 display: block;
                 position: relative;
@@ -338,11 +320,9 @@
             }
           }
         }
-
         .caption_tooltip {
           margin: auto;
           text-align: center;
-
           button {
             background-color: #fff;
             border: 0;
@@ -352,13 +332,11 @@
             padding: 7px 15px;
           }
         }
-
         .caption_container {
           color: rgba(0, 0, 0, 0.8);
           font-size: 12px;
           line-height: 14px;
           padding: 0 5px;
-
           a {
             color: #009edb;
             text-decoration: none;
